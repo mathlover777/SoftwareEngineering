@@ -1,0 +1,5003 @@
+format 76
+"backup8"
+  revision 5
+  modified_by 2 "Sourav"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  //class diagram settings
+  draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes show_stereotype_properties no
+  //use case diagram settings
+  package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes show_stereotype_properties no
+  //sequence diagram settings
+  show_full_operations_definition no write_horizontally yes class_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes show_stereotype_properties no show_class_context_mode no show_msg_context_mode no
+  //collaboration diagram settings
+  show_full_operations_definition no show_hierarchical_rank no write_horizontally yes class_drawing_mode natural drawing_language uml package_name_in_tab no show_context no show_msg_context no draw_all_relations yes shadow yes show_stereotype_properties no
+  //object diagram settings
+   write_horizontally yes package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes shadow yes show_stereotype_properties no
+  //component diagram settings
+  package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes shadow yes
+  draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no
+  //deployment diagram settings
+  package_name_in_tab no show_context no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes
+  draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no
+  //state diagram settings
+  package_name_in_tab no show_context no auto_label_position yes write_trans_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes
+  show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no
+  //activity diagram settings
+  package_name_in_tab no show_context no show_opaque_action_definition no auto_label_position yes write_flow_label_horizontally no draw_all_relations yes shadow yes
+  show_infonote yes drawing_language uml show_stereotype_properties no
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white 
+  font_size 8
+  diagram_format A4
+
+  image_root_dir ""
+
+  mark_for_import
+  
+  classview 128002 "hms_class_view_beta"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    classdiagram 128002 "hms"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 128002 "Student"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128002 "name"
+	private explicit_type "string"
+	init_value "\"\""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 128002 // get_name
+	set_oper operation_ref 128130 // set_name
+	comment "Name of the student"
+      end
+
+      attribute 128130 "id"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 128258 // get_id
+	set_oper operation_ref 128386 // set_id
+      end
+
+      attribute 128258 "address"
+	private explicit_type "string"
+	init_value "\"\""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 128514 // get_address
+	set_oper operation_ref 128642 // set_address
+      end
+
+      attribute 128386 "telephone"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 128770 // get_telephone
+	set_oper operation_ref 128898 // set_telephone
+      end
+
+      attribute 128514 "photo"
+	private explicit_type "any"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 129026 // get_photo
+	set_oper operation_ref 129154 // set_photo
+      end
+
+      attribute 128642 "hall"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 129282 // get_hall
+	set_oper operation_ref 129410 // set_hall
+      end
+
+      attribute 128770 "room"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 129538 // get_room
+	set_oper operation_ref 129666 // set_room
+      end
+
+      operation 128002 "get_name"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return name;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->name;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128002 // name
+      end
+
+      operation 128130 "set_name"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  name = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->name = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128002 // name
+      end
+
+      operation 128258 "get_id"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return id;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->id;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128130 // id
+      end
+
+      operation 128386 "set_id"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  id = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->id = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128130 // id
+      end
+
+      operation 128514 "get_address"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return address;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->address;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128258 // address
+      end
+
+      operation 128642 "set_address"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  address = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->address = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128258 // address
+      end
+
+      operation 128770 "get_telephone"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return telephone;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->telephone;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128386 // telephone
+      end
+
+      operation 128898 "set_telephone"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  telephone = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->telephone = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128386 // telephone
+      end
+
+      operation 129026 "get_photo"
+	force_body_gen const cpp_inline public explicit_return_type "any"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return photo;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->photo;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128514 // photo
+      end
+
+      operation 129154 "set_photo"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "any"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  photo = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->photo = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128514 // photo
+      end
+
+      operation 129282 "get_hall"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return hall;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->hall;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128642 // hall
+      end
+
+      operation 129410 "set_hall"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  hall = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->hall = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128642 // hall
+      end
+
+      operation 129538 "get_room"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return room;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->room;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 128770 // room
+      end
+
+      operation 129666 "set_room"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  room = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->room = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 128770 // room
+      end
+
+      operation 129794 "payDues"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Student pays his dues which is composed of mess charge, amenity charge and room rent"
+      end
+
+      attribute 129794 "password"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 131714 "checkPassword"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "password" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 128642 // <aggregation>
+	relation_ref 128514 // <aggregation>
+      end
+
+      attribute 145410 "messCharge"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 153090 // get_messCharge
+	set_oper operation_ref 153218 // set_messCharge
+      end
+
+      operation 153090 "get_messCharge"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return messCharge;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->messCharge;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 145410 // messCharge
+      end
+
+      operation 153218 "set_messCharge"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  messCharge = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->messCharge = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 145410 // messCharge
+      end
+
+      operation 153986 "allotRoom"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 138114 // <association>
+	relation 136706 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138114 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138242 // <association>
+      end
+
+      attribute 147074 "roomRent"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 159618 // get_roomRent
+	set_oper operation_ref 159746 // set_roomRent
+      end
+
+      operation 159618 "get_roomRent"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return roomRent;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->roomRent;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 147074 // roomRent
+      end
+
+      operation 159746 "set_roomRent"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  roomRent = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->roomRent = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 147074 // roomRent
+      end
+    end
+
+    class 128130 "Hall"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 129026 "name"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 129922 // get_name
+	set_oper operation_ref 130050 // set_name
+      end
+
+      attribute 129154 "code"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 130178 // get_code
+	set_oper operation_ref 130306 // set_code
+      end
+
+      attribute 129282 "numSingleRoom"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 130434 // get_numSingleRoom
+	set_oper operation_ref 130562 // set_numSingleRoom
+      end
+
+      attribute 129410 "numDoubleRoom"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 130946 // get_numDoubleRoom
+	set_oper operation_ref 131074 // set_numDoubleRoom
+      end
+
+      attribute 129538 "occSingleRoom"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 130690 // get_occSingleRoom
+	set_oper operation_ref 130818 // set_occSingleRoom
+      end
+
+      attribute 129666 "occDoubleRoom"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 131202 // get_occDoubleRoom
+	set_oper operation_ref 131330 // set_occDoubleRoom
+      end
+
+      operation 129922 "get_name"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return name;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->name;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129026 // name
+      end
+
+      operation 130050 "set_name"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  name = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->name = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129026 // name
+      end
+
+      operation 130178 "get_code"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return code;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->code;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129154 // code
+      end
+
+      operation 130306 "set_code"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  code = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->code = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129154 // code
+      end
+
+      operation 130434 "get_numSingleRoom"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return numSingleRoom;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->numSingleRoom;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129282 // numSingleRoom
+      end
+
+      operation 130562 "set_numSingleRoom"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  numSingleRoom = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->numSingleRoom = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129282 // numSingleRoom
+      end
+
+      operation 130690 "get_occSingleRoom"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return occSingleRoom;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->occSingleRoom;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129538 // occSingleRoom
+      end
+
+      operation 130818 "set_occSingleRoom"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  occSingleRoom = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->occSingleRoom = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129538 // occSingleRoom
+      end
+
+      operation 130946 "get_numDoubleRoom"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return numDoubleRoom;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->numDoubleRoom;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129410 // numDoubleRoom
+      end
+
+      operation 131074 "set_numDoubleRoom"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  numDoubleRoom = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->numDoubleRoom = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129410 // numDoubleRoom
+      end
+
+      operation 131202 "get_occDoubleRoom"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return occDoubleRoom;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->occDoubleRoom;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129666 // occDoubleRoom
+      end
+
+      operation 131330 "set_occDoubleRoom"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  occDoubleRoom = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->occDoubleRoom = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129666 // occDoubleRoom
+      end
+
+      attribute 129922 "status"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 131970 // get_status
+	set_oper operation_ref 132098 // set_status
+      end
+
+      attribute 130050 "singleRoomRent"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 132226 // get_singleRoomRent
+	set_oper operation_ref 132354 // set_singleRoomRent
+      end
+
+      attribute 130178 "doubleRoomRent"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 132482 // get_doubleRoomRent
+	set_oper operation_ref 132610 // set_doubleRoomRent
+      end
+
+      operation 131970 "get_status"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return status;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->status;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 129922 // status
+      end
+
+      operation 132098 "set_status"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  status = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->status = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 129922 // status
+      end
+
+      operation 132226 "get_singleRoomRent"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return singleRoomRent;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->singleRoomRent;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130050 // singleRoomRent
+      end
+
+      operation 132354 "set_singleRoomRent"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  singleRoomRent = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->singleRoomRent = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130050 // singleRoomRent
+      end
+
+      operation 132482 "get_doubleRoomRent"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return doubleRoomRent;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->doubleRoomRent;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130178 // doubleRoomRent
+      end
+
+      operation 132610 "set_doubleRoomRent"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  doubleRoomRent = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->doubleRoomRent = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130178 // doubleRoomRent
+      end
+
+      attribute 130306 "wardenId"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 157314 // get_wardenId
+	set_oper operation_ref 157442 // set_wardenId
+      end
+
+      attribute 131714 "messManager"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 136962 // get_messManager
+	set_oper operation_ref 137090 // set_messManager
+      end
+
+      operation 136962 "get_messManager"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return messManager;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->messManager;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 131714 // messManager
+      end
+
+      operation 137090 "set_messManager"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  messManager = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->messManager = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 131714 // messManager
+      end
+
+      classrelation 128514 // <aggregation>
+	relation 128514 o---
+	  a role_name "" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128514 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128642 // <aggregation>
+      end
+
+      classrelation 128770 // <aggregation>
+	relation 128642 o---
+	  a role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128770 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128898 // <aggregation>
+      end
+
+      classrelation 129026 // <aggregation>
+	relation 128770 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129026 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129154 // <aggregation>
+      end
+
+      classrelation 129282 // <aggregation>
+	relation 128898 o---
+	  a role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129282 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129410 // <aggregation>
+      end
+
+      classrelation 129538 // <aggregation>
+	relation 129026 o---
+	  a role_name "" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129538 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129666 // <aggregation>
+      end
+
+      classrelation 129794 // <aggregation>
+	relation 129154 o---
+	  a role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129794 // <aggregation>
+	  b role_name "" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129922 // <aggregation>
+      end
+
+      classrelation 130178 // <aggregation>
+	relation_ref 129282 // <aggregation>
+      end
+
+      classrelation 130306 // <aggregation>
+	relation 129410 o---
+	  a role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130306 // <aggregation>
+	  b role_name "" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130434 // <aggregation>
+      end
+
+      classrelation 130690 // <aggregation>
+	relation_ref 129538 // <aggregation>
+      end
+
+      classrelation 130818 // <aggregation>
+	relation 129666 o---
+	  a role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130818 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130946 // <aggregation>
+      end
+
+      attribute 138242 "messAccount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138370 "amenityAccount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138498 "repairAccount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 145026 "addToMessAccount"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145154 "addToAmenityAccount"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145282 "addToRepairAccount"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145410 "payFromMessAccount"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "amount" explicit_type "int"
+	  param in name "code" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145538 "payFromAmenityAccount"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "amount" explicit_type "int"
+	  param in name "name" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145666 "payFromReapirAccount"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "amount" explicit_type "int"
+	  param in name "name" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 138626 "salaryAccount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 145794 "payFromSalaryAccount"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "amount" explicit_type "int"
+	  param in name "code" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 145666 "studentlist"
+	private explicit_type "string"
+	stereotype "list"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 153602 "viewRoomOccupancy"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 154498 "setupHall"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 154626 "deleteHall"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 154754 "deleteRoom"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "roomNo" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 154882 "addRoom"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "type" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 157314 "get_wardenId"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return wardenId;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->wardenId;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130306 // wardenId
+      end
+
+      operation 157442 "set_wardenId"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  wardenId = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->wardenId = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130306 // wardenId
+      end
+
+      operation 157570 "viewAccountStatement"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 139522 // <association>
+	relation_ref 137346 // <association>
+      end
+
+      operation 157698 "addStudentToList"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "name" explicit_type "string"
+	  param in name "id" explicit_type "string"
+	  param in name "roomNo" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 158082 "addToSalaryAccount"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 146690 "miscAccount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 158210 "addToMiscAccount"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 158338 "payFromMiscAccount"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "amount" explicit_type "int"
+	  param in name "name" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 146818 "amenityCharge"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 158978 // get_amenityCharge
+	set_oper operation_ref 159106 // set_amenityCharge
+      end
+
+      operation 158978 "get_amenityCharge"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return amenityCharge;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->amenityCharge;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 146818 // amenityCharge
+      end
+
+      operation 159106 "set_amenityCharge"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  amenityCharge = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->amenityCharge = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 146818 // amenityCharge
+      end
+
+      attribute 146946 "rentAccount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 159234 "addToRentAccount"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 159362 "payFromRentAccount"
+	public explicit_return_type "int"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 146050 // <aggregation>
+	relation 143874 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 146050 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 146178 // <aggregation>
+      end
+    end
+
+    class 128258 "Warden"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 130434 "name"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 132738 // get_name
+	set_oper operation_ref 132866 // set_name
+      end
+
+      attribute 130562 "id"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 132994 // get_id
+	set_oper operation_ref 133122 // set_id
+      end
+
+      attribute 130690 "password"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130818 "hallCode"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 133378 // get_hallCode
+	set_oper operation_ref 133506 // set_hallCode
+      end
+
+      operation 132738 "get_name"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return name;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->name;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130434 // name
+      end
+
+      operation 132866 "set_name"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  name = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->name = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130434 // name
+      end
+
+      operation 132994 "get_id"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return id;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->id;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130562 // id
+      end
+
+      operation 133122 "set_id"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  id = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->id = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130562 // id
+      end
+
+      operation 133250 "checkPassword"
+	public explicit_return_type "bool"
+	nparams 1
+	  param in name "password" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133378 "get_hallCode"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return hallCode;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->hallCode;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130818 // hallCode
+      end
+
+      operation 133506 "set_hallCode"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  hallCode = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->hallCode = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130818 // hallCode
+      end
+
+      classrelation 130562 // <aggregation>
+	relation 129538 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130562 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130690 // <aggregation>
+      end
+
+      classrelation 130946 // <aggregation>
+	relation_ref 129666 // <aggregation>
+      end
+
+      classrelation 131074 // <composition>
+	relation 129794 *---
+	  a role_name "" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131074 // <composition>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131202 // <composition>
+      end
+
+      operation 154114 "create"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 138370 // <association>
+	relation 136834 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138370 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138498 // <association>
+      end
+
+      classrelation 139010 // <association>
+	relation_ref 137090 // <association>
+      end
+    end
+
+    class 128386 "Worker"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 130946 "name"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 135170 // get_name
+	set_oper operation_ref 135298 // set_name
+      end
+
+      attribute 131074 "id"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 135426 // get_id
+	set_oper operation_ref 135554 // set_id
+      end
+
+      operation 135170 "get_name"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return name;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->name;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 130946 // name
+      end
+
+      operation 135298 "set_name"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  name = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->name = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 130946 // name
+      end
+
+      operation 135426 "get_id"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return id;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->id;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 131074 // id
+      end
+
+      operation 135554 "set_id"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  id = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->id = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 131074 // id
+      end
+
+      attribute 131202 "hallCode"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 135682 // get_hallCode
+	set_oper operation_ref 135810 // set_hallCode
+      end
+
+      operation 135682 "get_hallCode"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return hallCode;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->hallCode;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 131202 // hallCode
+      end
+
+      operation 135810 "set_hallCode"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  hallCode = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->hallCode = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 131202 // hallCode
+      end
+
+      operation 153346 "recruitWorker"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 153474 "fireWorker"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 158722 "paySalary"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128514 "Clerk"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128002 // <generalisation>
+	relation 128002 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 128002 // <generalisation>
+	  b parent class_ref 128386 // Worker
+      end
+
+      classrelation 128898 // <aggregation>
+	relation_ref 128642 // <aggregation>
+      end
+
+      operation 154370 "recruitWorker"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128642 "Gardener"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128130 // <generalisation>
+	relation 128130 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 128130 // <generalisation>
+	  b parent class_ref 128386 // Worker
+      end
+
+      classrelation 129666 // <aggregation>
+	relation_ref 129026 // <aggregation>
+      end
+
+      classrelation 137858 // <generalisation>
+	relation 136450 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 137858 // <generalisation>
+	  b parent class_ref 142210 // DailyWorker
+      end
+    end
+
+    class 128770 "Attendant"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128258 // <generalisation>
+	relation 128258 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 128258 // <generalisation>
+	  b parent class_ref 128386 // Worker
+      end
+
+      classrelation 129922 // <aggregation>
+	relation_ref 129154 // <aggregation>
+      end
+
+      classrelation 137730 // <generalisation>
+	relation 136322 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 137730 // <generalisation>
+	  b parent class_ref 142210 // DailyWorker
+      end
+    end
+
+    class 128898 "HMC"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 131586 "password"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 136578 "checkPassword"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "password" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 130050 // <aggregation>
+	relation 129282 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130050 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130178 // <aggregation>
+      end
+
+      classrelation 130434 // <aggregation>
+	relation_ref 129410 // <aggregation>
+      end
+
+      classrelation 138626 // <association>
+	relation 136962 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138626 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138754 // <association>
+      end
+
+      operation 166530 "activatePaymentLink"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129026 "MessManager"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128386 // <generalisation>
+	relation 128386 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 128386 // <generalisation>
+	  b parent class_ref 128386 // Worker
+      end
+
+      classrelation 129154 // <aggregation>
+	relation_ref 128770 // <aggregation>
+      end
+
+      classrelation 129410 // <aggregation>
+	relation_ref 128898 // <aggregation>
+      end
+
+      operation 154242 "recruitWorker"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 158850 "payMonthlyPayment"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "amount" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160002 "computeMonthlyBill"
+	public explicit_return_type "int"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129154 "Printer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 138370 "printAccountStatement"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "hallCode" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 138498 "issueCheck"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "name" explicit_type "string"
+	  param in name "amount" explicit_type "int"
+	  param in name "hallCode" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 131202 // <composition>
+	relation_ref 129794 // <composition>
+      end
+
+      operation 153730 "generateSalaryList"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 139394 // <association>
+	relation 137346 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139394 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139522 // <association>
+      end
+
+      operation 159490 "printPaymentReceipt"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "amount" explicit_type "int"
+	  param in name "account" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 159874 "issueAdmissionLetterToStudent"
+	public explicit_return_type ""
+	nparams 4
+	  param in name "name" explicit_type "string"
+	  param in name "id" explicit_type "string"
+	  param in name "hallName" explicit_type "string"
+	  param in name "roomNo" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 142210 "DailyWorker"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 137986 // <generalisation>
+	relation 136578 ---|>
+	  a public
+	    java "${type}"
+	    php "${type}"
+	    classrelation_ref 137986 // <generalisation>
+	  b parent class_ref 128386 // Worker
+      end
+
+      attribute 145154 "dailySalary"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 152578 // get_dailySalary
+	set_oper operation_ref 152706 // set_dailySalary
+      end
+
+      attribute 145282 "attendence"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 152322 "giveAttendence"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152450 "getTotalAttendence"
+	public explicit_return_type "int"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152578 "get_dailySalary"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return dailySalary;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->dailySalary;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 145154 // dailySalary
+      end
+
+      operation 152706 "set_dailySalary"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  dailySalary = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->dailySalary = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 145154 // dailySalary
+      end
+
+      attribute 145538 "type"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 152834 // get_type
+	set_oper operation_ref 152962 // set_type
+      end
+
+      operation 152834 "get_type"
+	force_body_gen const cpp_inline public explicit_return_type "string"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return type;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->type;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 145538 // type
+      end
+
+      operation 152962 "set_type"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "string"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  type = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->type = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 145538 // type
+      end
+
+      classrelation 146178 // <aggregation>
+	relation_ref 143874 // <aggregation>
+      end
+    end
+
+    class 142338 "Complaint"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 145794 "message"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 155010 "setupComplaint"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "message" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 155138 "viewComplaint"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 155266 "postATR"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 155394 "removeComplaint"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 138242 // <association>
+	relation_ref 136706 // <association>
+      end
+
+      classrelation 138882 // <association>
+	relation 137090 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138882 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139010 // <association>
+      end
+
+      classrelation 139138 // <association>
+	relation 137218 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139138 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139266 // <association>
+      end
+
+      operation 158594 "forwardToHMC"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 142466 "GrantRequest"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 145922 "clerkSalary"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 155778 // get_clerkSalary
+	set_oper operation_ref 155906 // set_clerkSalary
+      end
+
+      attribute 146050 "attendentSalary"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 156034 // get_attendentSalary
+	set_oper operation_ref 156162 // set_attendentSalary
+      end
+
+      attribute 146178 "gardenerSalary"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 156290 // get_gardenerSalary
+	set_oper operation_ref 156418 // set_gardenerSalary
+      end
+
+      attribute 146306 "miscCharges"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 156546 // get_miscCharges
+	set_oper operation_ref 156674 // set_miscCharges
+      end
+
+      attribute 146434 "attendentCount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 156802 // get_attendentCount
+	set_oper operation_ref 156930 // set_attendentCount
+      end
+
+      attribute 146562 "gardenerCount"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	get_oper operation_ref 157058 // get_gardenerCount
+	set_oper operation_ref 157186 // set_gardenerCount
+      end
+
+      operation 155778 "get_clerkSalary"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return clerkSalary;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->clerkSalary;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 145922 // clerkSalary
+      end
+
+      operation 155906 "set_clerkSalary"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  clerkSalary = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->clerkSalary = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 145922 // clerkSalary
+      end
+
+      operation 156034 "get_attendentSalary"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return attendentSalary;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->attendentSalary;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 146050 // attendentSalary
+      end
+
+      operation 156162 "set_attendentSalary"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  attendentSalary = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->attendentSalary = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 146050 // attendentSalary
+      end
+
+      operation 156290 "get_gardenerSalary"
+	force_body_gen const cpp_inline public explicit_return_type ""
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return gardenerSalary;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->gardenerSalary;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 146178 // gardenerSalary
+      end
+
+      operation 156418 "set_gardenerSalary"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type ""
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  gardenerSalary = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->gardenerSalary = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 146178 // gardenerSalary
+      end
+
+      operation 156546 "get_miscCharges"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return miscCharges;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->miscCharges;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 146306 // miscCharges
+      end
+
+      operation 156674 "set_miscCharges"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  miscCharges = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->miscCharges = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 146306 // miscCharges
+      end
+
+      operation 156802 "get_attendentCount"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return attendentCount;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->attendentCount;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 146434 // attendentCount
+      end
+
+      operation 156930 "set_attendentCount"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  attendentCount = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->attendentCount = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 146434 // attendentCount
+      end
+
+      operation 157058 "get_gardenerCount"
+	force_body_gen const cpp_inline public explicit_return_type "int"
+	nparams 0
+	
+	cpp_name_spec "get_${name}"
+	final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  return gardenerCount;
+}
+"
+	java_name_spec "get${Name}"
+	php_final php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  return $this->gardenerCount;
+}
+"
+	php_name_spec "get${Name}"
+	
+	python_name_spec "get${Name}"
+	
+	idl_name_spec "get_${name}"
+	get_of_attribute attribute_ref 146562 // gardenerCount
+      end
+
+      operation 157186 "set_gardenerCount"
+	force_body_gen public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "int"
+	
+	cpp_name_spec "set_${name}"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  gardenerCount = ${p0};
+}
+"
+	java_name_spec "set${Name}"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${)}
+{
+  $this->gardenerCount = ${p0};
+}
+"
+	php_name_spec "set${Name}"
+	
+	python_name_spec "set${Name}"
+	
+	idl_name_spec "set_${name}"
+	set_of_attribute attribute_ref 146562 // gardenerCount
+      end
+
+      classrelation 138498 // <association>
+	relation_ref 136834 // <association>
+      end
+
+      classrelation 138754 // <association>
+	relation_ref 136962 // <association>
+      end
+
+      classrelation 139266 // <association>
+	relation_ref 137218 // <association>
+      end
+
+      operation 157826 "makeGrant"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 157954 "viewGrant"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    sequencediagram 141698 "sequence diagram all"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 141826 "admission"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 141954 "requesting and granting fund"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 142082 "complaints"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 142210 "paying dues"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 142338 "setupHall"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 142466 "paymentofSalary"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    activity 128002 "admission"
+      activitydiagram 142594 "admission"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations no shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 128130 initial_node ""
+	flow 128002 "<flow>"
+	  on activityaction_ref 128130 // activity action student submits necessary documents
+	end
+      end
+
+      activityaction 128130 "student submits necessary documents"
+	opaque_action
+	simplerelation 145154
+	  -_->
+	    on activityaction_ref 128258 // activity action students enters room choice
+	end
+
+	flow 129026 "<flow>"
+	  on activityaction_ref 128258 // activity action students enters room choice
+	end
+      end
+
+      activityaction 128258 "students enters room choice"
+	opaque_action
+	flow 128130 "if available"
+	  stereotype "decisionInputFlow"
+	  on activitynode_ref 128258 // decision
+	end
+      end
+
+      activitynode 128258 decision ""
+	flow 128258 "true"
+	  on activityaction_ref 128386 // activity action allot room according to student's choice
+	end
+
+	flow 128386 "false"
+	  on activityaction_ref 128514 // activity action allot room automatically
+	end
+      end
+
+      activityaction 128386 "allot room according to student's choice"
+	opaque_action
+	flow 128642 "<flow>"
+	  on activitynode_ref 128386 // merge
+	end
+      end
+
+      activityaction 128514 "allot room automatically"
+	opaque_action
+	flow 128514 "<flow>"
+	  on activitynode_ref 128386 // merge
+	end
+      end
+
+      activitynode 128386 merge ""
+	flow 128770 "<flow>"
+	  on activityaction_ref 128642 // activity action update hall database
+	end
+      end
+
+      activityaction 128642 "update hall database"
+	opaque_action
+	flow 128898 "<flow>"
+	  on activityaction_ref 128770 // activity action issue letter to student
+	end
+      end
+
+      activityaction 128770 "issue letter to student"
+	opaque_action
+	flow 129154 "<flow>"
+	  on activitynode_ref 128514 // activity_final
+	end
+      end
+
+      activitynode 128514 activity_final ""
+      end
+
+      interruptibleactivityregion 128002 "student"
+      end
+
+      activityobject 128002 "ewe"
+	 explicit_type ""
+	unordered 
+      end
+
+      expansionregion 128002 "student"
+	stream
+	interruptibleactivityregion 128258 "HMC"
+	end
+      end
+
+      activitypartition 134658 "student"
+      end
+
+      activitypartition 134786 "HMC"
+      end
+    end
+
+    activity 128130 "complaints"
+      activitydiagram 142722 "compliants"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations no shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 128642 initial_node ""
+	flow 129282 "<flow>"
+	  on activityaction_ref 128898 // activity action student register a complaint in the website
+	end
+      end
+
+      activityaction 128898 "student register a complaint in the website"
+	opaque_action
+	flow 129410 "<flow>"
+	  on activityaction_ref 129026 // activity action warden views complaint
+	end
+      end
+
+      activityaction 129026 "warden views complaint"
+	opaque_action
+	flow 129538 "maintainance complaints"
+	  on activitynode_ref 128770 // decision
+	end
+      end
+
+      activitynode 128770 decision ""
+	flow 129666 "false"
+	  on activitynode_ref 128898 // merge
+	end
+
+	flow 129794 "true"
+	  on activityaction_ref 129410 // activity action warden forwards complaint to HMC
+	end
+      end
+
+      activityaction 129154 "warden takes action"
+	opaque_action
+	flow 130434 "<flow>"
+	  on activityaction_ref 129282 // activity action warden posts ATR
+	end
+      end
+
+      activityaction 129282 "warden posts ATR"
+	opaque_action
+	flow 130818 "student is satisfied"
+	  on activitynode_ref 129026 // decision
+	end
+      end
+
+      activityaction 129410 "warden forwards complaint to HMC"
+	opaque_action
+	flow 129922 "<flow>"
+	  on activityaction_ref 129538 // activity action HMC views the complaints
+	end
+      end
+
+      activityaction 129538 "HMC views the complaints"
+	opaque_action
+	flow 130050 "<flow>"
+	  on activityaction_ref 129666 // activity action HMC grants maintance money
+	end
+
+	flow 135042 "<flow>"
+	  on activitynode_ref 130690 // fork
+	end
+      end
+
+      activityaction 129666 "HMC grants maintance money"
+	opaque_action
+	flow 130178 "<flow>"
+	  on activitynode_ref 128898 // merge
+	end
+
+	flow 130562 "<flow>"
+	  on activityaction_ref 129794 // activity action HMC Posts ATR
+	end
+
+	flow 135426 "<flow>"
+	  on activitynode_ref 130818 // decision
+	end
+      end
+
+      activitynode 128898 merge ""
+	flow 130306 "<flow>"
+	  on activityaction_ref 129154 // activity action warden takes action
+	end
+      end
+
+      activityaction 129794 "HMC Posts ATR"
+	opaque_action
+	flow 130690 "<flow>"
+	  on activitynode_ref 128898 // merge
+	end
+
+	flow 135554 "<flow>"
+	  on activitynode_ref 130818 // decision
+	end
+      end
+
+      activitynode 129026 decision ""
+	flow 130946 "true"
+	  on activitynode_ref 129154 // activity_final
+	end
+
+	flow 131074 "false"
+	  on activityaction_ref 128898 // activity action student register a complaint in the website
+	end
+      end
+
+      activitynode 129154 activity_final ""
+      end
+
+      activitypartition 128002 "aadsdf"
+      end
+
+      interruptibleactivityregion 128130 "klk"
+      end
+
+      activitypartition 128130 "klk"
+      end
+
+      activitynode 130690 fork ""
+	flow 135170 "<flow>"
+	  on activityaction_ref 129666 // activity action HMC grants maintance money
+	end
+
+	flow 135298 "<flow>"
+	  on activityaction_ref 129794 // activity action HMC Posts ATR
+	end
+
+	flow 135682 "<flow>"
+	  on activitynode_ref 130946 // decision
+	end
+      end
+
+      activitynode 130818 decision ""
+	flow 136194 "<flow>"
+	  on activitynode_ref 131074 // decision
+	end
+      end
+
+      activitynode 130946 decision ""
+	flow 135810 "<flow>"
+	  on activityaction_ref 129666 // activity action HMC grants maintance money
+	end
+
+	flow 135938 "<flow>"
+	  on activityaction_ref 129666 // activity action HMC grants maintance money
+	end
+
+	flow 136066 "<flow>"
+	  on activitynode_ref 130818 // decision
+	end
+      end
+
+      activitynode 131074 decision ""
+	flow 136322 "<flow>"
+	  on activitynode_ref 128898 // merge
+	end
+
+	flow 136450 "<flow>"
+	  on activityaction_ref 131842 // activity action take other action
+	end
+      end
+
+      activityaction 131842 "take other action"
+	opaque_action
+	flow 136578 "<flow>"
+	  on activityaction_ref 129154 // activity action warden takes action
+	end
+
+	flow 136706 "<flow>"
+	  on activitynode_ref 128898 // merge
+	end
+      end
+
+      activitypartition 134914 "student"
+      end
+
+      activitypartition 135042 "warden"
+      end
+
+      activitypartition 135170 "HMC"
+      end
+    end
+
+    activity 128258 "requesting and granting fund"
+      activitydiagram 142850 "requesting and granting fund"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations no shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 129282 initial_node ""
+	flow 131330 "<flow>"
+	  on activityaction_ref 129922 // activity action enter salary for clerk
+	end
+      end
+
+      activityaction 129922 "enter salary for clerk"
+	opaque_action
+	flow 131458 "<flow>"
+	  on activityaction_ref 130050 // activity action enter salary for daily workers
+	end
+      end
+
+      activityaction 130050 "enter salary for daily workers"
+	opaque_action
+	flow 131202 "<flow>"
+	  on activityaction_ref 130050 // activity action enter salary for daily workers
+	end
+
+	flow 131586 "<flow>"
+	  on activityaction_ref 130178 // activity action enter est. number of gardeners and attendent for the year
+	end
+      end
+
+      activityaction 130178 "enter est. number of gardeners and attendent for the year"
+	opaque_action
+	flow 131714 "<flow>"
+	  on activityaction_ref 130306 // activity action enter est. misc charges
+	end
+      end
+
+      activityaction 130306 "enter est. misc charges"
+	opaque_action
+	flow 131842 "<flow>"
+	  on activityaction_ref 130434 // activity action hmc views the grants
+	end
+      end
+
+      activityaction 130434 "hmc views the grants"
+	opaque_action
+	flow 131970 "<flow>"
+	  on activitynode_ref 129410 // merge
+	end
+
+	flow 132226 "grant is proper"
+	  on activitynode_ref 129666 // decision
+	end
+      end
+
+      activitynode 129410 merge ""
+	flow 132098 "<flow>"
+	  on activityaction_ref 130562 // activity action add money to salaryAccount
+	end
+      end
+
+      activitynode 129538 activity_final ""
+      end
+
+      activityaction 130562 "add money to salaryAccount"
+	opaque_action
+	flow 132610 "<flow>"
+	  on activityaction_ref 130690 // activity action add money to Misc Account
+	end
+      end
+
+      activityaction 130690 "add money to Misc Account"
+	opaque_action
+	flow 132738 "<flow>"
+	  on activitynode_ref 129538 // activity_final
+	end
+      end
+
+      activitynode 129666 decision ""
+	flow 132354 "true"
+	  on activityaction_ref 130562 // activity action add money to salaryAccount
+	end
+
+	flow 132482 "false"
+	  on activitynode_ref 129538 // activity_final
+	end
+      end
+
+      activitypartition 135298 "warden"
+      end
+
+      activitypartition 135426 "HMC"
+      end
+    end
+
+    activity 128514 "paying dues"
+      activitydiagram 142978 "paying dues"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 129794 initial_node ""
+	flow 132866 "<flow>"
+	  on activityaction_ref 130818 // activity action HMC activates link for paying dues
+	end
+      end
+
+      activityaction 130818 "HMC activates link for paying dues"
+	opaque_action
+	flow 132994 "<flow>"
+	  on activityaction_ref 130946 // activity action total due for each student is computed
+	end
+      end
+
+      activityaction 130946 "total due for each student is computed"
+	opaque_action
+	flow 133122 "<flow>"
+	  on activityaction_ref 131074 // activity action students pays total dues
+	end
+
+	flow 133634 "<flow>"
+	  on activityaction_ref 131074 // activity action students pays total dues
+	end
+      end
+
+      activityaction 131074 "students pays total dues"
+	opaque_action
+	flow 133250 "<flow>"
+	  on activitynode_ref 130050 // join
+	end
+
+	flow 133378 "<flow>"
+	  on activitynode_ref 130050 // join
+	end
+
+	flow 133762 "<flow>"
+	  on activitynode_ref 130178 // fork
+	end
+      end
+
+      activityaction 131202 "amount added to messAccount"
+	opaque_action
+	flow 134274 "<flow>"
+	  on activitynode_ref 130306 // join
+	end
+      end
+
+      activityaction 131330 "amount added to amenity account"
+	opaque_action
+	flow 134402 "<flow>"
+	  on activitynode_ref 130306 // join
+	end
+      end
+
+      activityaction 131458 "amount added to room rent account"
+	opaque_action
+	flow 134530 "<flow>"
+	  on activitynode_ref 130306 // join
+	end
+      end
+
+      activitynode 129922 fork ""
+      end
+
+      activitynode 130050 join ""
+	flow 133506 "<flow>"
+	  on activityaction_ref 131202 // activity action amount added to messAccount
+	end
+      end
+
+      activitynode 130178 fork ""
+	flow 133890 "<flow>"
+	  on activityaction_ref 131330 // activity action amount added to amenity account
+	end
+
+	flow 134018 "<flow>"
+	  on activityaction_ref 131202 // activity action amount added to messAccount
+	end
+
+	flow 134146 "<flow>"
+	  on activityaction_ref 131458 // activity action amount added to room rent account
+	end
+      end
+
+      activitynode 130306 join ""
+	flow 134658 "<flow>"
+	  on activityaction_ref 131586 // activity action payment receipt is printed to student
+	end
+      end
+
+      activityaction 131586 "payment receipt is printed to student"
+	opaque_action
+	flow 134786 "<flow>"
+	  on activityaction_ref 131714 // activity action payment link deactivated by HMC
+	end
+      end
+
+      activityaction 131714 "payment link deactivated by HMC"
+	opaque_action
+	flow 134914 "<flow>"
+	  on activitynode_ref 130434 // activity_final
+	end
+      end
+
+      activitynode 130434 activity_final ""
+      end
+
+      activitynode 130562 fork ""
+      end
+
+      activitypartition 135554 "HMC"
+      end
+
+      activitypartition 135682 "student"
+      end
+
+      activitypartition 135810 "Hall"
+      end
+
+      activitypartition 135938 "printer"
+      end
+    end
+
+    activity 128770 "setup hall"
+      activitydiagram 143106 "setup hall"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations no shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 131202 initial_node ""
+	flow 136834 "<flow>"
+	  on activityaction_ref 131970 // activity action warden is created
+	end
+      end
+
+      activityaction 131970 "warden is created"
+	opaque_action
+	flow 137346 "<flow>"
+	  on activitynode_ref 131714 // join
+	end
+      end
+
+      activitynode 131330 initial_node ""
+	flow 136962 "<flow>"
+	  on activitynode_ref 131586 // fork
+	end
+      end
+
+      activitynode 131458 initial_node ""
+      end
+
+      activitynode 131586 fork ""
+	flow 137090 "<flow>"
+	  on activityaction_ref 131970 // activity action warden is created
+	end
+
+	flow 137218 "<flow>"
+	  on activityaction_ref 132098 // activity action mess manager is recruited
+	end
+      end
+
+      activityaction 132098 "mess manager is recruited"
+	opaque_action
+	flow 137474 "<flow>"
+	  on activitynode_ref 131714 // join
+	end
+      end
+
+      activityaction 132226 "hall is created"
+	opaque_action
+	flow 137730 "<flow>"
+	  on activityaction_ref 132354 // activity action hall status is set
+	end
+      end
+
+      activityaction 132354 "hall status is set"
+	opaque_action
+	flow 137858 "<flow>"
+	  on activityaction_ref 132482 // activity action rooms are added
+	end
+      end
+
+      activityaction 132482 "rooms are added"
+	opaque_action
+	flow 137986 "<flow>"
+	  on activityaction_ref 132610 // activity action room rents are added
+	end
+      end
+
+      activityaction 132610 "room rents are added"
+	opaque_action
+	flow 138114 "<flow>"
+	  on activityaction_ref 132738 // activity action warden is assigned
+	end
+      end
+
+      activityaction 132738 "warden is assigned"
+	opaque_action
+	flow 138242 "<flow>"
+	  on activityaction_ref 132994 // activity action recruit clerk
+	end
+
+	flow 146690 "<flow>"
+	  on activityaction_ref 132866 // activity action mess manager is assigned
+	end
+      end
+
+      activityaction 132866 "mess manager is assigned"
+	opaque_action
+	flow 146818 "<flow>"
+	  on activityaction_ref 132994 // activity action recruit clerk
+	end
+
+	flow 147074 "<flow>"
+	  on activityaction_ref 140930 // activity action sets hall's amenity charge
+	end
+      end
+
+      activityaction 132994 "recruit clerk"
+	opaque_action
+	flow 138370 "<flow>"
+	  on activityaction_ref 133122 // activity action recruit daily workers
+	end
+      end
+
+      activityaction 133122 "recruit daily workers"
+	opaque_action
+	flow 138498 "<flow>"
+	  on activitynode_ref 131842 // activity_final
+	end
+      end
+
+      activitynode 131714 join ""
+	flow 137602 "<flow>"
+	  on activityaction_ref 132226 // activity action hall is created
+	end
+      end
+
+      activitynode 131842 activity_final ""
+      end
+
+      activitypartition 136066 "HMC"
+      end
+
+      activitypartition 136194 "warden"
+      end
+
+      activityaction 140930 "sets hall's amenity charge"
+	opaque_action
+	flow 146946 "<flow>"
+	  on activityaction_ref 132994 // activity action recruit clerk
+	end
+      end
+    end
+
+    activity 128898 "paying salary to workers"
+      activitydiagram 143234 "paying salary to workers"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations no shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activitynode 131970 initial_node ""
+	flow 138626 "<flow>"
+	  on activityaction_ref 133250 // activity action clerk gives attendence to workers
+	end
+      end
+
+      activityaction 133250 "clerk gives attendence to workers"
+	opaque_action
+	flow 138754 "<flow>"
+	  on activityaction_ref 133378 // activity action checks attendence lists
+	end
+
+	flow 139266 "<flow>"
+	  on activityaction_ref 133762 // activity action cheque is issued
+	end
+      end
+
+      activityaction 133378 "checks attendence lists"
+	opaque_action
+	flow 138882 "<flow>"
+	  on activityaction_ref 133506 // activity action generates salary list
+	end
+      end
+
+      activityaction 133506 "generates salary list"
+	opaque_action
+	flow 139010 "<flow>"
+	  on activityaction_ref 133634 // activity action money retrieved from salary account
+	end
+      end
+
+      activityaction 133634 "money retrieved from salary account"
+	opaque_action
+	flow 139138 "<flow>"
+	  on activityaction_ref 133762 // activity action cheque is issued
+	end
+      end
+
+      activityaction 133762 "cheque is issued"
+	opaque_action
+	flow 139394 "<flow>"
+	  on activityaction_ref 133890 // activity action salary is paid
+	end
+      end
+
+      activityaction 133890 "salary is paid"
+	opaque_action
+	flow 139522 "<flow>"
+	  on activitynode_ref 132098 // activity_final
+	end
+      end
+
+      activitynode 132098 activity_final ""
+      end
+
+      activitypartition 136322 "Hall"
+      end
+
+      activitypartition 136450 "Warden"
+      end
+
+      activitypartition 136578 "Clerk"
+      end
+
+      activitypartition 136706 "Printer"
+      end
+
+      activitypartition 136834 "Worker"
+      end
+    end
+
+    activity 129026 "payment of salary to mess manager"
+      activitydiagram 143362 "payment of salary to mess manageer"
+	package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+	show_infonote default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      activityaction 134018 "warden computes total monthly bill"
+	opaque_action
+	flow 139778 "<flow>"
+	  on activityaction_ref 134146 // activity action money retrieved from mess account
+	end
+      end
+
+      activitynode 132226 initial_node ""
+	flow 139650 "<flow>"
+	  on activityaction_ref 134018 // activity action warden computes total monthly bill
+	end
+      end
+
+      activityaction 134146 "money retrieved from mess account"
+	opaque_action
+	flow 139906 "<flow>"
+	  on activityaction_ref 134274 // activity action cheque issued
+	end
+      end
+
+      activityaction 134274 "cheque issued"
+	opaque_action
+	flow 140034 "<flow>"
+	  on activityaction_ref 134402 // activity action payment made
+	end
+      end
+
+      activityaction 134402 "payment made"
+	opaque_action
+	flow 140162 "<flow>"
+	  on activitynode_ref 132354 // activity_final
+	end
+      end
+
+      activitynode 132354 activity_final ""
+      end
+
+      activitypartition 136962 "warden"
+      end
+
+      activitypartition 137090 "hall"
+      end
+
+      activitypartition 137218 "printer"
+      end
+
+      activitypartition 137346 "messManager"
+      end
+    end
+
+    collaborationdiagram 143490 "admission"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    collaborationdiagram 143618 "requesting and granting fund"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    collaborationdiagram 143746 "complaints"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    collaborationdiagram 143874 "setup hall"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    collaborationdiagram 150402 "paying dues"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    collaborationdiagram 150530 "payment of salary"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    state 128002 "test"
+      stereotype "machine"
+      statediagram 150658 "warden"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations no shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      state 128130 "dsfsf"
+      end
+
+      statediagram 150786 "Hall"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations no shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 128002 initial 
+      end
+
+      state 128514 "number of single room of hall is set"
+	transition 128514 "<transition>"
+	  on state_ref 128642 // number of double room of hall is set
+	  external 
+	end
+      end
+
+      state 128642 "number of double room of hall is set"
+	transition 128642 "<transition>"
+	  on state_ref 128770 // hall's room rents are set
+	  external 
+	end
+      end
+
+      state 128770 "hall's room rents are set"
+	transition 129026 "<transition>"
+	  on state_ref 129154 // Hall is assigned a warden
+	  external 
+	end
+      end
+
+      state 128898 "Hall is set up by HMC"
+	transition 128386 "<transition>"
+	  on state_ref 128514 // number of single room of hall is set
+	  external 
+	end
+
+	transition 128770 "<transition>"
+	  on state_ref 129026 // Hall status is set
+	  external 
+	end
+      end
+
+      state 129026 "Hall status is set"
+	transition 128898 "<transition>"
+	  on state_ref 128514 // number of single room of hall is set
+	  external 
+	end
+      end
+
+      state 129154 "Hall is assigned a warden"
+	transition 129154 "<transition>"
+	  on state_ref 129282 // Hall is assigned a mess manger
+	  external 
+	end
+
+	transition 130690 "<transition>"
+	  on state_ref 130562 // payment made to mess manager from hall's mess account
+	  external 
+	end
+      end
+
+      state 129282 "Hall is assigned a mess manger"
+	transition 129282 "<transition>"
+	  on pseudostate_ref 128130 // final
+	  external 
+	end
+
+	transition 130306 "<transition>"
+	  on state_ref 130050 // Hall's amenity charge is set by warden
+	  external 
+	end
+      end
+
+      pseudostate 128130 final 
+      end
+
+      pseudostate 128258 initial 
+	transition 129410 "<transition>"
+	  on state_ref 128898 // Hall is set up by HMC
+	  external 
+	end
+      end
+
+      pseudostate 128386 initial 
+	transition 129538 "<transition>"
+	  on state_ref 129410 // Student's details are set
+	  external 
+	end
+      end
+
+      state 129410 "Student's details are set"
+	transition 129666 "<transition>"
+	  on state_ref 129538 // Student's hall name is added
+	  external 
+	end
+      end
+
+      state 129538 "Student's hall name is added"
+	transition 129794 "<transition>"
+	  on state_ref 129666 // Student's room is assigned
+	  external 
+	end
+      end
+
+      state 129666 "Student's room is assigned"
+	transition 129922 "<transition>"
+	  on state_ref 129794 // Students room rent is set
+	  external 
+	end
+      end
+
+      state 129794 "Students room rent is set"
+	transition 130050 "<transition>"
+	  on state_ref 129922 // Student's mess charge is set
+	  external 
+	end
+      end
+
+      state 129922 "Student's mess charge is set"
+	transition 130178 "<transition>"
+	  on pseudostate_ref 128514 // final
+	  external 
+	end
+      end
+
+      stateaction 128002
+	stereotype "send-signal"
+      end
+
+      pseudostate 128514 final 
+      end
+
+      statediagram 150914 "student"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      state 130050 "Hall's amenity charge is set by warden"
+	transition 130434 "<transition>"
+	  on pseudostate_ref 128130 // final
+	  external 
+	end
+
+	transition 130562 "<transition>"
+	  on state_ref 130178 // dues paid to hall by students
+	  external 
+	end
+
+	transition 130818 "<transition>"
+	  on state_ref 130306 // Salary grant issued to halls salary salary account
+	  external 
+	end
+      end
+
+      state 130178 "dues paid to hall by students"
+	transition 131074 "<transition>"
+	  on state_ref 130562 // payment made to mess manager from hall's mess account
+	  external 
+	end
+      end
+
+      state 130306 "Salary grant issued to halls salary salary account"
+	transition 130946 "<transition>"
+	  on state_ref 130178 // dues paid to hall by students
+	  external 
+	end
+
+	transition 131202 "<transition>"
+	  on state_ref 130434 // Salary paid to employees from salary account
+	  external 
+	end
+
+	transition 131330 "<transition>"
+	  on pseudostate_ref 128130 // final
+	  external 
+	end
+      end
+
+      state 130434 "Salary paid to employees from salary account"
+	transition 131586 "<transition>"
+	  on pseudostate_ref 128130 // final
+	  external 
+	end
+      end
+
+      state 130562 "payment made to mess manager from hall's mess account"
+	transition 131458 "<transition>"
+	  on pseudostate_ref 128130 // final
+	  external 
+	end
+      end
+
+      statediagram 151042 "complaint"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations no shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 128642 initial 
+	transition 131714 "<transition>"
+	  on state_ref 130690 // complaint is created by student
+	  external 
+	end
+      end
+
+      state 130690 "complaint is created by student"
+	transition 131842 "<transition>"
+	  on state_ref 130818 // complainted is viewed by warden
+	  external 
+	end
+      end
+
+      state 130818 "complainted is viewed by warden"
+	transition 131970 "<transition>"
+	  on state_ref 130946 // ATR is posted to complaint by warden
+	  external 
+	end
+      end
+
+      state 130946 "ATR is posted to complaint by warden"
+	transition 132098 "[need to forward to hmc]"
+	  on pseudostate_ref 128898 // choice
+	  external 
+	end
+      end
+
+      state 131074 "complaint is forwarded to HMC"
+	transition 132482 "<transition>"
+	  on state_ref 131202 // complaint is view by hmc
+	  external 
+	end
+      end
+
+      state 131202 "complaint is view by hmc"
+	transition 132610 "<transition>"
+	  on state_ref 131330 // ATR posted to complaint by HMC
+	  external 
+	end
+      end
+
+      pseudostate 128770 final 
+      end
+
+      state 131330 "ATR posted to complaint by HMC"
+	transition 132738 "<transition>"
+	  on state_ref 130946 // ATR is posted to complaint by warden
+	  external 
+	end
+      end
+
+      pseudostate 128898 choice 
+	transition 132226 "false"
+	  on pseudostate_ref 128770 // final
+	  external 
+	end
+
+	transition 132354 "true"
+	  on state_ref 131074 // complaint is forwarded to HMC
+	  external 
+	end
+
+	transition 132866 "false"
+	  on state_ref 131458 // complaint is deleted by student
+	  external 
+	end
+      end
+
+      state 131458 "complaint is deleted by student"
+	transition 132994 "<transition>"
+	  on pseudostate_ref 128770 // final
+	  external 
+	end
+      end
+
+      statediagram 151170 "grantRequest"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 129026 initial 
+	transition 133122 "<transition>"
+	  on state_ref 131586 // grant request crearted by warden
+	  external 
+	end
+      end
+
+      state 131586 "grant request crearted by warden"
+	transition 133250 "<transition>"
+	  on state_ref 131714 // Salary of clerk set
+	  external 
+	end
+      end
+
+      state 131714 "Salary of clerk set"
+	transition 133378 "<transition>"
+	  on state_ref 131842 // Salary of gardener set
+	  external 
+	end
+      end
+
+      state 131842 "Salary of gardener set"
+	transition 133506 "<transition>"
+	  on state_ref 132226 // total number of attendents is set
+	  external 
+	end
+      end
+
+      state 131970 "Salary of attendent is set"
+	transition 133890 "<transition>"
+	  on state_ref 132482 // Misc charges are set
+	  external 
+	end
+      end
+
+      state 132098 "total number of gardeners is set"
+	transition 133762 "<transition>"
+	  on state_ref 131970 // Salary of attendent is set
+	  external 
+	end
+      end
+
+      state 132226 "total number of attendents is set"
+	transition 133634 "<transition>"
+	  on state_ref 132098 // total number of gardeners is set
+	  external 
+	end
+      end
+
+      state 132354 "grant IS forwarded to HMC"
+	transition 134146 "<transition>"
+	  on pseudostate_ref 129154 // final
+	  external 
+	end
+      end
+
+      pseudostate 129154 final 
+      end
+
+      state 132482 "Misc charges are set"
+	transition 134018 "<transition>"
+	  on state_ref 132354 // grant IS forwarded to HMC
+	  external 
+	end
+      end
+
+      statediagram 151298 "worker"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations no shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 129282 initial 
+	transition 134274 "<transition>"
+	  on state_ref 132610 // worker is created
+	  external 
+	end
+      end
+
+      state 132610 "worker is created"
+	transition 134402 "<transition>"
+	  on state_ref 132738 // worker is recruited
+	  external 
+	end
+      end
+
+      state 132738 "worker is recruited"
+	transition 134530 "<transition>"
+	  on state_ref 132866 // worker is assigned hall code
+	  external 
+	end
+
+	transition 134658 "<transition>"
+	  on state_ref 132866 // worker is assigned hall code
+	  external 
+	end
+      end
+
+      state 132866 "worker is assigned hall code"
+	transition 134786 "<transition>"
+	  on state_ref 132994 // worker is paid salary
+	  external 
+	end
+      end
+
+      state 132994 "worker is paid salary"
+	transition 134914 "<transition>"
+	  on state_ref 133122 // worker is fired
+	  external 
+	end
+
+	transition 135042 "<transition>"
+	  on state_ref 132994 // worker is paid salary
+	end
+
+	transition 135298 "<transition>"
+	  on state_ref 132994 // worker is paid salary
+	end
+      end
+
+      state 133122 "worker is fired"
+	transition 135170 "<transition>"
+	  on pseudostate_ref 129410 // final
+	  external 
+	end
+      end
+
+      pseudostate 129410 final 
+      end
+
+      statediagram 151426 "messManager"
+	package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+	show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+	size A4
+      end
+
+      pseudostate 129538 initial 
+	transition 135426 "<transition>"
+	  on state_ref 133250 // MessManager created
+	  external 
+	end
+      end
+
+      state 133250 "MessManager created"
+	transition 135554 "<transition>"
+	  on state_ref 133378 // MessManager is assigned a hall
+	  external 
+	end
+      end
+
+      state 133378 "MessManager is assigned a hall"
+	transition 135682 "<transition>"
+	  on state_ref 133506 // Monthy payment is paid to mess manager
+	  external 
+	end
+      end
+
+      state 133506 "Monthy payment is paid to mess manager"
+	transition 135810 "<transition>"
+	  on state_ref 133506 // Monthy payment is paid to mess manager
+	end
+
+	transition 135938 "<transition>"
+	  on state_ref 133634 // MessManager is Fired
+	  external 
+	end
+      end
+
+      state 133634 "MessManager is Fired"
+	transition 136066 "<transition>"
+	  on pseudostate_ref 129666 // final
+	  external 
+	end
+      end
+
+      pseudostate 129666 final 
+      end
+
+      pseudostate 129794 initial 
+	transition 136194 "<transition>"
+	  on state_ref 133762 // warden is created
+	  external 
+	end
+      end
+
+      state 133762 "warden is created"
+	transition 136322 "<transition>"
+	  on state_ref 133890 // warden is assigned to hall
+	  external 
+	end
+      end
+
+      state 133890 "warden is assigned to hall"
+	transition 136450 "<transition>"
+	  on state_ref 134018 // warden is removed
+	  external 
+	end
+      end
+
+      state 134018 "warden is removed"
+	transition 136578 "<transition>"
+	  on pseudostate_ref 129922 // final
+	  external 
+	end
+      end
+
+      pseudostate 129922 final 
+      end
+    end
+  end
+
+  package_ref 134530 // student activity
+
+  package_ref 134658 // hmc activity
+
+  package_ref 134786 // warden activity
+
+  package_ref 134914 // other use cases
+end

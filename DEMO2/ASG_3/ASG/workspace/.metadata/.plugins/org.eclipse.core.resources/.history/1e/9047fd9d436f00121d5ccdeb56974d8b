@@ -1,0 +1,351 @@
+import javax.swing.JPanel;
+
+import java.awt.BasicStroke;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JLabel;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.RoundRectangle2D;
+import java.util.Calendar;
+import java.util.TimeZone;
+import javax.swing.border.BevelBorder;
+
+
+public class clock extends JPanel implements Runnable {
+	
+	private JButton zoomout,zoomin,settings;
+	private JTextField s,m,hr;
+	private JLabel city_label,zone_label;
+	private JDialog d;
+	Thread t;
+	
+	private String city="KOLKATA";
+	private int ghour=5,gmin=30,gsec=0;
+	private int syshour,sysmin,syssec;
+	private int hour,min,sec;
+	private int size=6;
+	private double h=88,w=94,b=10;//h and w denote half of height and width of clock
+	private int maxsize=8,minsize=0;
+	private int sign=0;//sign=0 positive...sign=1 negative
+	
+	/**
+	 * Create the panel.
+	 */
+	public clock() {
+		setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		setBackground(new Color(139, 0, 0));
+		setLayout(new BorderLayout(0, 0));
+		
+		JPanel panel = new JPanel();
+		add(panel, BorderLayout.NORTH);
+		panel.setLayout(new GridLayout(2, 1, 0, 0));
+		
+		JPanel panel_1 = new JPanel();
+		add(panel_1, BorderLayout.SOUTH);
+		panel_1.setLayout(new GridLayout(2, 3, 0, 0));
+		
+		
+		s=new JTextField();
+		s.setHorizontalAlignment(SwingConstants.CENTER);
+		s.setForeground(Color.RED);
+		s.setBackground(Color.WHITE);
+		s.setEditable(false);
+		m=new JTextField();
+		m.setHorizontalAlignment(SwingConstants.CENTER);
+		m.setForeground(Color.RED);
+		m.setBackground(Color.WHITE);
+		m.setEditable(false);
+		hr=new JTextField();
+		hr.setHorizontalAlignment(SwingConstants.CENTER);
+		hr.setForeground(Color.RED);
+		hr.setBackground(Color.WHITE);
+		hr.setEditable(false);
+		
+		zoomout=new JButton("-");
+		zoomin=new JButton("+");
+		settings=new JButton("Settings");
+		
+		panel_1.add(hr);
+		panel_1.add(m);
+		panel_1.add(s);
+		panel_1.add(zoomout);
+		panel_1.add(settings);
+		panel_1.add(zoomin);
+		
+		
+		city_label=new JLabel("CITY");
+		city_label.setForeground(Color.WHITE);
+		city_label.setBackground(new Color(0, 0, 0));
+		city_label.setHorizontalAlignment(SwingConstants.CENTER);
+		zone_label=new JLabel("ZONE");
+		zone_label.setAutoscrolls(true);
+		zone_label.setBackground(new Color(0, 0, 0));
+		zone_label.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(city_label);
+		panel.add(zone_label);
+		
+		
+		city_label.setOpaque(true);
+		
+		setLabels();
+		
+		zoomout.addActionListener(
+			new ActionListener(){
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					size--;
+					h=h-12;
+					w=w-14;
+					if(size==minsize){
+						zoomout.setEnabled(false);
+					}
+					zoomin.setEnabled(true);
+				}
+				
+			}
+		);
+		zoomin.addActionListener(
+				new ActionListener(){
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						size++;
+						h=h+12;
+						w=w+14;
+						if(size==maxsize){
+							zoomin.setEnabled(false);
+						}
+						zoomout.setEnabled(true);
+					}
+					
+				}
+			);
+		
+		
+		settings.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					d=new setsettings(city,sign,ghour,gmin);
+					d.setVisible(true);
+					if(((setsettings)d).isSuccess()){
+						setZoneName(((setsettings)d).getZoneName());
+						setOffset(((setsettings)d).getSign(),((setsettings)d).getHour(),((setsettings)d).getMin());
+						setLabels();
+					}
+				}
+				
+			}
+		);
+		
+		
+		
+		t = new Thread(this, city);
+		
+		t.start();
+		 
+	}
+	private double angle = 0;
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		Dimension dim = getSize();
+		
+		
+		
+		Graphics2D g2 = (Graphics2D) g;
+		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+		RenderingHints.VALUE_ANTIALIAS_ON);
+		int cx = (int) (dim.getWidth() / 2);
+		int cy = (int) (dim.getHeight() / 2-10);		
+		
+		
+		/**************Code for clock border********************/
+		g2.setPaint(Color.black);
+		g2.setStroke(new BasicStroke(2f));
+		g2.fill(new RoundRectangle2D.Double(cx-w-b,cy-h-b, 2*(w+b), 2*(h+b), 90, 90));
+		g2.setPaint(Color.WHITE);
+		g2.setStroke(new BasicStroke(2f));
+		g2.draw(new RoundRectangle2D.Double(cx-w,cy-h, 2*w, 2*h, 90, 90));
+		/*******************************************************/		
+		
+		
+		/**************Code for main clock components*******************/
+		g2.setFont(new Font("Dialog", Font.BOLD, (int) (h / 5)));
+		g2.drawString("XII", (int) (cx-(h/10)) , (int) (cy -h+h/4));
+		g2.drawString("III", (int) (cx+w-(h/3)) , (int) (cy));
+		g2.drawString("VI", (int) (cx-(h/10)) , (int) (cy +h-(h/10)));
+		g2.drawString("X", (int) (cx-w+(h/10)) , (int) (cy));
+		/*************************************************************/
+		
+		/****************************Code for small lines in positions of 1,2,4....11*/
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*2/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*2/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*4/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*4/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*5/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*5/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*7/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*7/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*8/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*8/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*10/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*10/6), cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)*11/6), cx, cy);
+		g2.setStroke(new BasicStroke(3f));
+		g2.draw(new Line2D.Double(cx, cy-3*h/4, cx, cy -3*h/4+h/60));
+		g2.rotate(-((Math.PI)*11/6), cx, cy);
+		/***********************************************************************/
+		
+		
+		/**********************Getting Current Time in Current TimeZone*********************/
+		getSystemTime();
+		getCurrentTime();
+		
+		hr.setText(""+hour);//for the digital clock
+		m.setText(""+min);
+		s.setText(""+sec);
+		
+		
+		
+		if(hour>12) hour=hour-12;//converting to 12H time
+		
+		
+		
+		/**********************Code to draw the current position of the clock sticks***************/
+		g2.setPaint(Color.red);
+		g2.rotate(((Math.PI)/6)*hour, cx, cy);
+		g2.setStroke(new BasicStroke(4f));
+		g2.draw(new Line2D.Double(cx, cy, cx, cy - h/2));
+		g2.rotate(-((Math.PI)/6)*hour, cx, cy);
+		g2.setPaint(Color.gray);
+		g2.rotate(((Math.PI)/30)*min, cx, cy);
+		g2.setStroke(new BasicStroke(2f));
+		g2.draw(new Line2D.Double(cx, cy, cx, cy - 5*h/6));
+		g2.rotate(-((Math.PI)/30)*min, cx, cy);
+		g2.setPaint(Color.white);
+		g2.rotate(((Math.PI)/30)*sec, cx, cy);
+		g2.setStroke(new BasicStroke(1f));
+		g2.draw(new Line2D.Double(cx, cy, cx, cy - h));
+		g2.rotate(-((Math.PI)/30)*sec, cx, cy);
+		/********************************************************************************************/
+	  
+	}
+
+	@Override
+	public void run() {
+		try {
+			while (true) {
+				Thread.currentThread();
+				Thread.sleep(1000);
+				repaint();
+			}
+		} catch (InterruptedException e) {
+		}
+	}
+
+	private void getSystemTime(){
+		//gives the current gmt time
+		TimeZone t = TimeZone.getTimeZone("UTCa");
+		Calendar now = Calendar.getInstance(t);
+		syshour = now.get(Calendar.HOUR_OF_DAY);
+		sysmin = now.get(Calendar.MINUTE);
+		syssec = now.get(Calendar.SECOND);
+	}
+	
+	private void getCurrentTime(){
+		int carry;
+		sec=syssec;
+		if(sign==0){
+			min=sysmin+gmin;
+			if(min>=60){
+				carry=1;
+				min=min-60;
+			}
+			else{
+				carry=0;
+			}
+			hour=syshour+ghour+carry;
+			if(hour>=24){
+				hour=hour-24;
+			}
+		}else{
+			min=sysmin-gmin;
+			carry=0;
+			if(sysmin<0){
+				min=60+min;
+				carry=-1;
+			}else{
+				carry=0;
+			}
+			hour=syshour-ghour-carry;
+			if(hour<0){
+				hour=hour+24;
+			}
+		}
+		return;
+	}
+	
+	public void setZoneName(String cityName){
+		city=""+cityName;
+		return;
+	}
+	
+	public void setOffset(int s,int oh,int om){
+		sign=s;
+		ghour=oh;
+		gmin=om;
+		return;
+	}
+	public void setLabels(){
+		city_label.setText(city);
+		if(sign==0){
+			zone_label.setText("+ ( "+ghour+":"+gmin+" )");
+		}else{
+			zone_label.setText("- ( "+ghour+":"+gmin+" )");
+		}
+	}
+}

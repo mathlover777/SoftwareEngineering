@@ -1,0 +1,139 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.JSeparator;
+
+
+public class Compare extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField last;
+	private JTextField newsale;
+	private JTextArea log;
+
+	/**
+	 * Launch the application.
+	 */
+
+	/**
+	 * Create the dialog.
+	 * @throws IOException 
+	 */
+	public Compare() throws IOException {
+		setTitle("Compare Sales ");
+		setResizable(false);
+		setModal(true);
+		setBounds(100, 100, 203, 318);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblLastYearsTotal = new JLabel("Last Years Total Sale :");
+			lblLastYearsTotal.setBounds(10, 11, 172, 14);
+			contentPanel.add(lblLastYearsTotal);
+		}
+		{
+			last = new JTextField();
+			last.setBounds(10, 36, 172, 20);
+			contentPanel.add(last);
+			last.setColumns(10);
+		}
+		{
+			JLabel lblThisYearsSale = new JLabel("This Years Sale :");
+			lblThisYearsSale.setBounds(10, 82, 172, 14);
+			contentPanel.add(lblThisYearsSale);
+		}
+		{
+			newsale = new JTextField();
+			newsale.setBounds(10, 107, 172, 20);
+			contentPanel.add(newsale);
+			newsale.setColumns(10);
+		}
+		{
+			JScrollPane scrollPane = new JScrollPane();
+			scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+			scrollPane.setBounds(10, 138, 172, 82);
+			contentPanel.add(scrollPane);
+			{
+				log = new JTextArea();
+				log.setLineWrap(true);
+				log.setEditable(false);
+				scrollPane.setViewportView(log);
+			}
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 67, 176, 2);
+			contentPanel.add(separator);
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 244, 177, 2);
+			contentPanel.add(separator);
+		}
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				JButton exit = new JButton("Close");
+				exit.setActionCommand("Cancel");
+				buttonPane.add(exit);
+			}
+		}
+		
+		FileInputStream fstream = new FileInputStream("lastyearsale.txt");
+		// Get the object of DataInputStream
+		DataInputStream in = new DataInputStream(fstream);
+		String strLine="";
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		strLine=br.readLine();
+		
+		
+		last.setText(strLine);
+		
+		br.close();
+		in.close();
+		fstream.close();
+		
+		fstream = new FileInputStream("yearsale.txt");
+		// Get the object of DataInputStream
+		in = new DataInputStream(fstream);
+		strLine="";
+		br = new BufferedReader(new InputStreamReader(in));
+		strLine=br.readLine();
+		br.close();
+		in.close();
+		fstream.close();
+		
+		newsale.setText(strLine);
+		
+		if(stringToInt(newsale.getText())>=stringToInt(last.getText())) log.append("\nGood Job !!!");
+		else log.append("\nWE NEEEEED A \n\nNEW MANAGER !!");
+	}
+	
+	public int stringToInt(String s){
+		int n=0;
+		for(int i=0;i<=s.length()-1;i++){
+			n=n*10+(s.charAt(i))-48;
+		}
+		return n;
+	}
+
+}

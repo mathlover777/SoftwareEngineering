@@ -1,0 +1,261 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.URL;
+
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JDialog;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+
+public class Start extends JFrame {
+	
+	
+	
+	private JPanel contentPane;
+	private JMenu Teacher;
+	private JMenuItem newTest;
+	private JMenuItem fullStat;
+	private JMenuItem partStat;
+	private JMenuItem exit;
+	private JMenuItem signIn;
+	private JMenuItem takeTest;
+	private JMenuItem about;
+	public JDialog sl,st,t,s,is,bt;
+	
+	
+	
+	/*******************Runtime Data********************/
+	private String id;
+	private JTextArea log;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Start frame = new Start();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Start() {
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (UnsupportedLookAndFeelException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		setTitle("MCTE 0.1");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 430, 325);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		Teacher = new JMenu("Teacher");
+		menuBar.add(Teacher);
+		
+		newTest = new JMenuItem("Setup New Test");
+		Teacher.add(newTest);
+		
+		fullStat = new JMenuItem("Check Test Stat");
+		Teacher.add(fullStat);
+		
+		partStat = new JMenuItem("Individual Student Stat");
+		Teacher.add(partStat);
+		
+		exit = new JMenuItem("Exit");
+		Teacher.add(exit);
+		
+		JMenu mnStudent = new JMenu("Student");
+		menuBar.add(mnStudent);
+		
+		signIn = new JMenuItem("Sign In");
+		mnStudent.add(signIn);
+		
+		takeTest = new JMenuItem("Take Test");
+		takeTest.setEnabled(false);
+		mnStudent.add(takeTest);
+		
+		JMenu mnAbout = new JMenu("About");
+		menuBar.add(mnAbout);
+		
+		about = new JMenuItem("About Developer");
+		mnAbout.add(about);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setBounds(10, 11, 404, 254);
+		contentPane.add(scrollPane);
+		
+		log = new JTextArea();
+		log.setText("WELCOME TO\r\nSS MCTE ver0.1");
+		log.setEditable(false);
+		log.setLineWrap(true);
+		scrollPane.setViewportView(log);
+		
+		/*****************************Menu Events************************/
+		newTest.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					String filename;
+					st=new SetupTest();
+					st.setVisible(true);
+					if(((SetupTest)st).isSucess()){
+						filename=((SetupTest)st).getFileName();
+						log.append("\nNew Test Successfully Added !! filename="+filename);
+					}
+					else{
+						log.append("\n"+((SetupTest)st).getMsg());
+					}
+				}
+			}
+		);
+		fullStat.addActionListener(
+				new ActionListener(){
+					
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						s=new Stats();
+						s.setVisible(true);
+					}
+					
+				}
+			);
+		partStat.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						is=new IndStat();
+						is.setVisible(true);
+					}
+					
+				}
+			);
+		exit.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						dispose();
+					}
+					
+				}
+			);
+		signIn.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						sl=new StudentLog();
+						sl.setVisible(true);
+						if(((StudentLog) sl).ifSuccess()){
+							takeTest.setEnabled(true);
+							id=((StudentLog)sl).getId();
+							log.append("\nSuccessfully signed in as "+id);
+						}
+						else{
+							id="";
+							id=((StudentLog)sl).getId();
+							log.append("\nLogging failed : "+id);
+							takeTest.setEnabled(false);
+						}
+					}
+					
+				}
+			);
+		takeTest.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						t=new Test();
+						t.setVisible(true);
+						String testname=((Test)t).getTestName();
+						if(((Test)t).isSuccess()){
+							try {
+								t=new BeginTest(testname,id);
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+							t.setVisible(true);
+						}
+						else{
+							log.append("\nUnable to start Test...");
+						}
+						if(((BeginTest)t).isSuccess()){
+							int fm,c,u,i;
+							fm=((BeginTest)t).getCount();
+							c=((BeginTest)t).getCorrect();
+							i=((BeginTest)t).getIncorrect();
+							u=fm-c-i;
+							t=new TestResult(testname,id,fm,c,u,i);
+							t.setVisible(true);
+						}
+					}
+					
+				}
+			);
+		about.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						AboutMe t=new AboutMe();
+						t.setVisible(true);
+					}
+					
+				}
+			);
+		/***************Menu Events Ends Here****************************/
+		
+	}
+}

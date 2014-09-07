@@ -1,0 +1,11 @@
+window_sizes 1366 706 300 1060 595 35
+diagrams
+  active  collaborationdiagram_ref 143874 // setup hall
+    1060 597 100 4 0 0
+end
+show_stereotypes
+selected collaborationdiagram_ref 143874 // setup hall
+open
+  classview_ref 128002 // hms_class_view_beta
+end
+end

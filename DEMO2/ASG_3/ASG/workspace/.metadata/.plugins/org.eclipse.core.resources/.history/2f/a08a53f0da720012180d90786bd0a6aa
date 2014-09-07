@@ -1,0 +1,435 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JSeparator;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.JTextArea;
+
+
+public class sReg extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField name;
+	private JTextField oldroll;
+	private JTextField ad1;
+	private JTextField ad2;
+	private JTextField ad3;
+	private JTextField ad4;
+	private JTextField phone;
+	private JTextField email;
+	private JPasswordField password;
+	private JButton register;
+	private JPasswordField rpassword;
+	private JButton close;
+
+	/**
+	 * Launch the application.
+	 */
+
+	/**
+	 * Create the dialog.
+	 */
+	
+	
+	
+	private String studentname="",old="",add1="",add2="",add3="",add4="",phoneno="",emailid="",pass1="",pass2="",roll="";
+	private boolean success=false;
+	private JTextArea log;
+	public sReg() {
+		setTitle("Sign Up");
+		setResizable(false);
+		setModal(true);
+		setBounds(100, 100, 662, 445);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblName = new JLabel("Name :");
+			lblName.setBounds(10, 21, 74, 14);
+			contentPanel.add(lblName);
+		}
+		{
+			JLabel lblNewLabel = new JLabel("Old Roll :");
+			lblNewLabel.setBounds(10, 57, 74, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 92, 399, 2);
+			contentPanel.add(separator);
+		}
+		{
+			JLabel lblAddressLine = new JLabel("Address Line 1 :");
+			lblAddressLine.setBounds(10, 105, 91, 14);
+			contentPanel.add(lblAddressLine);
+		}
+		{
+			JLabel lblAddressLine_1 = new JLabel("Address Line 2 :");
+			lblAddressLine_1.setBounds(10, 130, 91, 14);
+			contentPanel.add(lblAddressLine_1);
+		}
+		{
+			JLabel lblAddressLine_2 = new JLabel("Address Line 3 :");
+			lblAddressLine_2.setBounds(10, 155, 91, 14);
+			contentPanel.add(lblAddressLine_2);
+		}
+		{
+			JLabel lblNewLabel_1 = new JLabel("Address Line 4 :");
+			lblNewLabel_1.setBounds(10, 180, 91, 14);
+			contentPanel.add(lblNewLabel_1);
+		}
+		{
+			JLabel lblPhone = new JLabel("Phone :");
+			lblPhone.setBounds(10, 222, 91, 14);
+			contentPanel.add(lblPhone);
+		}
+		{
+			JLabel lblEmail = new JLabel("Email :");
+			lblEmail.setBounds(10, 247, 91, 14);
+			contentPanel.add(lblEmail);
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 205, 399, 6);
+			contentPanel.add(separator);
+		}
+		{
+			name = new JTextField();
+			name.setBounds(130, 18, 227, 25);
+			contentPanel.add(name);
+			name.setColumns(10);
+		}
+		{
+			oldroll = new JTextField();
+			oldroll.setBounds(130, 54, 227, 27);
+			contentPanel.add(oldroll);
+			oldroll.setColumns(10);
+		}
+		{
+			ad1 = new JTextField();
+			ad1.setBounds(130, 105, 227, 17);
+			contentPanel.add(ad1);
+			ad1.setColumns(10);
+		}
+		{
+			ad2 = new JTextField();
+			ad2.setBounds(130, 127, 227, 17);
+			contentPanel.add(ad2);
+			ad2.setColumns(10);
+		}
+		{
+			ad3 = new JTextField();
+			ad3.setText("");
+			ad3.setBounds(130, 153, 227, 17);
+			contentPanel.add(ad3);
+			ad3.setColumns(10);
+		}
+		{
+			ad4 = new JTextField();
+			ad4.setBounds(130, 177, 227, 17);
+			contentPanel.add(ad4);
+			ad4.setColumns(10);
+		}
+		{
+			phone = new JTextField();
+			phone.setBounds(130, 219, 227, 17);
+			contentPanel.add(phone);
+			phone.setColumns(10);
+		}
+		{
+			email = new JTextField();
+			email.setBounds(130, 244, 227, 17);
+			contentPanel.add(email);
+			email.setColumns(10);
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 268, 399, 6);
+			contentPanel.add(separator);
+		}
+		{
+			JLabel lblPassword = new JLabel("Password : ");
+			lblPassword.setBounds(10, 307, 91, 14);
+			contentPanel.add(lblPassword);
+		}
+		{
+			JLabel lblReenter = new JLabel("Re-Enter :");
+			lblReenter.setBounds(10, 332, 74, 14);
+			contentPanel.add(lblReenter);
+		}
+		{
+			password = new JPasswordField();
+			password.setBounds(130, 304, 227, 17);
+			contentPanel.add(password);
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 370, 399, 2);
+			contentPanel.add(separator);
+		}
+		{
+			rpassword = new JPasswordField();
+			rpassword.setBounds(130, 329, 227, 17);
+			contentPanel.add(rpassword);
+		}
+		{
+			JScrollPane scrollPane = new JScrollPane();
+			scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+			scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+			scrollPane.setBounds(424, 21, 222, 352);
+			contentPanel.add(scrollPane);
+			{
+				log = new JTextArea();
+				log.setEditable(false);
+				log.setLineWrap(true);
+				scrollPane.setViewportView(log);
+			}
+		}
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				register = new JButton("Register");
+				register.setActionCommand("OK");
+				buttonPane.add(register);
+				getRootPane().setDefaultButton(register);
+			}
+			{
+				close = new JButton("Close");
+				close.setActionCommand("Cancel");
+				buttonPane.add(close);
+			}
+		}
+		
+		/********************events**************/
+		register.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					getdata();
+					if(check()){
+						roll="";
+						try {
+							roll=generateId();
+						} catch (IOException e2) {
+							// TODO Auto-generated catch block
+							e2.printStackTrace();
+						}
+						log.append("\nPlease note \nyour roll Number : \n\n"+roll+"\n");
+						try {
+							addStudent();
+							createEmptyFile(roll+"_registered.txt");
+							addLine(roll+"_registered.txt","N");
+							success=true;
+							register.setEnabled(false);
+							log.append("\nClick on close to exit..");
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							//System.out.println("\nSorry cant modify data base or related database file does not exist contact developer");
+							success=false;
+						}
+					}
+				}
+				
+			}
+		);
+		
+		close.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					dispose();
+				}
+				
+			}
+		);
+	}
+	
+	
+	
+	public static String MD5(String md5) {
+		md5="salt"+md5;   
+		try {
+		        java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+		        byte[] array = md.digest(md5.getBytes());
+		        StringBuffer sb = new StringBuffer();
+		        for (int i = 0; i < array.length; ++i) {
+		          sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+		       }
+		        return sb.toString();
+		    } catch (java.security.NoSuchAlgorithmException e) {
+		    }
+		    return null;
+		}
+	
+	
+	public void getdata(){
+		studentname=name.getText();
+		old=oldroll.getText();
+		add1=ad1.getText();
+		add2=ad2.getText();
+		add3=ad3.getText();
+		add4=ad4.getText();
+		phoneno=phone.getText();
+		emailid=email.getText();
+		pass1=password.getText();
+		pass2=password.getText();
+		return;
+	}
+	
+	
+	public boolean check(){
+		if(studentname.equals("")||old.equals("")||phoneno.equals("")||emailid.equals("")||pass1.equals("")||pass2.equals("")){
+			success=false;
+			log.append("\n1 or more fileds are empty...try again...");
+			return success;
+		}
+		if(!pass1.equals(pass2)){
+			success=false;
+			log.append("\nPasswords were not same ... ");
+			return success;
+		}
+		log.append("\nData verified....attemping to modify database..");
+		success=true;
+		return success;
+	}
+	
+	public String generateId() throws IOException{
+		FileInputStream fstream = new FileInputStream("lastroll.txt");
+		  // Get the object of DataInputStream
+		  DataInputStream in = new DataInputStream(fstream);
+		  String strLine="";
+		  BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		  strLine=br.readLine();
+		  int i=stringToInt(strLine);
+		  i=i+1;
+		  strLine=""+i;
+		  br.close();
+		  in.close();
+		  fstream.close();
+		  FileWriter fout= new FileWriter("lastroll.txt");
+		  BufferedWriter out = new BufferedWriter(fout);
+		  out.write(strLine);
+		  out.close();
+		  fout.close();
+		  return strLine;
+	}
+	
+	public void addStudent() throws IOException{
+		addLine("studentlist.txt",roll);
+		addLine("studentlist.txt",MD5(pass1));
+		addLine("cgpa_list.txt",roll);
+		addLine("cgpa_list.txt","0");
+		addLine("cgpa_list.txt","0");
+		addLine("cgpa_list.txt","0");
+		addLine("cgpa_list.txt","0");
+		FileWriter fout= new FileWriter(roll+"_details.txt");
+		createEmptyFile(roll_+"core.txt);
+		BufferedWriter out = new BufferedWriter(fout);
+		out.write(MD5(pass1));
+		out.write("\r\n"+studentname);
+		out.write("\r\n"+old);
+		out.write("\r\n"+add1);
+		out.write("\r\n"+add2);
+		out.write("\r\n"+add3);
+		out.write("\r\n"+add4);
+		out.write("\r\n"+phoneno);
+		out.write("\r\n"+emailid);
+		out.close();
+		fout.close();
+		
+		return;
+	}
+	
+	public static void addLine(String file,String line) throws IOException{
+		FileInputStream f1=new FileInputStream(file);
+		FileWriter f2=new FileWriter("tempa.txt");
+		BufferedWriter out = new BufferedWriter(f2);
+		int i;
+		i=f1.read();
+		int c=0;
+		if(i==-1){
+			c=1;
+		}
+		while(i!=-1){
+			out.write((char)i);
+			i=f1.read();
+		}
+		if(c==0){
+			out.write("\r\n"+line);
+		}
+		if(c==1){
+			out.write(line);
+		}
+		out.close();
+		f1.close();
+		copyToFile("tempa.txt",file);
+	}
+	public static void copyToFile(String file1,String file2) throws IOException{
+		FileInputStream f1=new FileInputStream(file1);
+		FileOutputStream f2=new FileOutputStream(file2);
+		int i;
+		char c=0;
+		i=f1.read();
+		while(i!=-1){
+			f2.write(i);
+			i=f1.read();
+		}
+		f1.close();
+		f2.close();
+	}
+	public int stringToInt(String s){
+		int n=0;
+		for(int i=0;i<=s.length()-1;i++){
+			n=n*10+(s.charAt(i))-48;
+		}
+		return n;
+	}
+	
+	public void disableall(){
+		name.setEditable(false);
+		oldroll.setEditable(false);
+		ad1.setEditable(false);
+		ad2.setEditable(false);
+		ad3.setEditable(false);
+		ad4.setEditable(false);
+		phone.setEditable(false);
+		email.setEditable(false);
+		password.setEditable(false);
+		rpassword.setEditable(false);
+		register.setEnabled(false);
+	}
+	public boolean createEmptyFile(String filename) throws IOException{
+		FileWriter f2=new FileWriter(filename);
+		BufferedWriter out = new BufferedWriter(f2);
+		out.close();
+		f2.close();
+		return true;
+	}
+
+}

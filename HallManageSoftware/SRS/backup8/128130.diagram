@@ -1,0 +1,268 @@
+format 76
+
+classinstance 128130 class_ref 128898 // HMC
+  name ""   xyz 35 4 2000 life_line_z 2000
+classinstance 128514 class_ref 128130 // Hall
+  name ""   xyz 190 113 2000 life_line_z 2000
+classinstance 131842 class_ref 128258 // Warden
+  name ""   xyz 271 145 2000 life_line_z 2000
+classinstance 132354 class_ref 129026 // MessManager
+  name ""   xyz 327 189 2000 life_line_z 2000
+classinstance 132866 class_ref 128642 // Gardener
+  name ""   xyz 420 239 2000 life_line_z 2000
+classinstance 132994 class_ref 128770 // Attendant
+  name ""   xyz 506 241 2005 life_line_z 2000
+classinstance 133122 class_ref 128514 // Clerk
+  name ""   xyz 581 241 2000 life_line_z 2000
+classinstance 134146 class_ref 128002 // Student
+  name ""   xyz 117 117 2000 life_line_z 2000
+durationcanvas 130818 classinstance_ref 128130 // :HMC
+  xyzwh 54 126 2010 11 179
+  overlappingdurationcanvas 131074
+    xyzwh 60 149 2020 11 136
+  end
+end
+durationcanvas 131330 classinstance_ref 128514 // :Hall
+  xyzwh 209 163 2010 11 33
+end
+durationcanvas 131970 classinstance_ref 131842 // :Warden
+  xyzwh 292 200 2010 11 30
+end
+durationcanvas 132482 classinstance_ref 132354 // :MessManager
+  xyzwh 363 237 2010 11 31
+end
+durationcanvas 133250 classinstance_ref 131842 // :Warden
+  xyzwh 292 365 2010 11 114
+end
+durationcanvas 133378 classinstance_ref 132866 // :Gardener
+  xyzwh 445 386 2010 11 34
+end
+durationcanvas 133634 classinstance_ref 132994 // :Attendant
+  xyzwh 531 363 2010 11 25
+end
+durationcanvas 133890 classinstance_ref 133122 // :Clerk
+  xyzwh 600 414 2010 11 25
+end
+durationcanvas 134658 classinstance_ref 134146 // :Student
+  xyzwh 137 399 2010 11 57
+end
+durationcanvas 134786 classinstance_ref 128130 // :HMC
+  xyzwh 54 387 2010 11 72
+end
+durationcanvas 135042 classinstance_ref 128514 // :Hall
+  xyzwh 209 437 2010 11 25
+end
+durationcanvas 135298 classinstance_ref 134146 // :Student
+  xyzwh 137 491 2010 11 252
+end
+durationcanvas 135426 classinstance_ref 128130 // :HMC
+  xyzwh 54 489 2010 11 51
+end
+durationcanvas 135682 classinstance_ref 131842 // :Warden
+  xyzwh 292 647 2010 11 87
+end
+durationcanvas 136706 classinstance_ref 131842 // :Warden
+  xyzwh 292 543 2010 11 62
+end
+durationcanvas 136962 classinstance_ref 131842 // :Warden
+  xyzwh 292 828 2010 11 182
+end
+durationcanvas 137090 classinstance_ref 132354 // :MessManager
+  xyzwh 363 828 2010 11 56
+end
+durationcanvas 137346 classinstance_ref 132866 // :Gardener
+  xyzwh 445 971 2010 11 61
+end
+durationcanvas 137602 classinstance_ref 132994 // :Attendant
+  xyzwh 531 950 2010 11 31
+end
+durationcanvas 137858 classinstance_ref 133122 // :Clerk
+  xyzwh 600 877 2010 11 42
+end
+durationcanvas 139266 classinstance_ref 133122 // :Clerk
+  xyzwh 600 451 2010 11 62
+end
+durationcanvas 139522 classinstance_ref 132994 // :Attendant
+  xyzwh 531 453 2010 11 36
+end
+durationcanvas 140034 classinstance_ref 132866 // :Gardener
+  xyzwh 445 482 2010 11 42
+end
+durationcanvas 140290 classinstance_ref 128130 // :HMC
+  xyzwh 54 542 2010 11 58
+end
+durationcanvas 140418 classinstance_ref 128514 // :Hall
+  xyzwh 209 542 2010 11 46
+end
+durationcanvas 140674 classinstance_ref 128130 // :HMC
+  xyzwh 54 637 2010 11 40
+end
+durationcanvas 140802 classinstance_ref 128514 // :Hall
+  xyzwh 209 637 2010 11 25
+end
+durationcanvas 141058 classinstance_ref 128130 // :HMC
+  xyzwh 54 707 2010 11 40
+end
+durationcanvas 141186 classinstance_ref 128514 // :Hall
+  xyzwh 209 707 2010 11 25
+end
+durationcanvas 141442 classinstance_ref 131842 // :Warden
+  xyzwh 292 314 2010 11 40
+end
+durationcanvas 141570 classinstance_ref 128130 // :HMC
+  xyzwh 54 314 2010 11 25
+end
+durationcanvas 141826 classinstance_ref 128130 // :HMC
+  xyzwh 54 767 2010 11 40
+end
+durationcanvas 141954 classinstance_ref 131842 // :Warden
+  xyzwh 292 767 2010 11 25
+end
+reflexivemsg 131202 synchronous
+  to durationcanvas_ref 131074
+  yz 149 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131458 synchronous
+  from durationcanvas_ref 131074
+  to durationcanvas_ref 131330
+  yz 164 2030 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 131714 return
+  from durationcanvas_ref 131330
+  to durationcanvas_ref 131074
+  yz 183 2035 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132098 synchronous
+  from durationcanvas_ref 131074
+  to durationcanvas_ref 131970
+  yz 200 2040 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132226 return
+  from durationcanvas_ref 131970
+  to durationcanvas_ref 131074
+  yz 217 2045 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132610 synchronous
+  from durationcanvas_ref 131074
+  to durationcanvas_ref 132482
+  yz 237 2050 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 132738 return
+  from durationcanvas_ref 132482
+  to durationcanvas_ref 131074
+  yz 255 2025 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133506 synchronous
+  from durationcanvas_ref 133250
+  to durationcanvas_ref 133378
+  yz 400 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 133762 synchronous
+  from durationcanvas_ref 133250
+  to durationcanvas_ref 133634
+  yz 366 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 134018 synchronous
+  from durationcanvas_ref 133250
+  to durationcanvas_ref 133890
+  yz 421 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 134914 synchronous
+  from durationcanvas_ref 134658
+  to durationcanvas_ref 134786
+  yz 404 2015 explicitmsg "adm"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 91 390
+msg 135170 synchronous
+  from durationcanvas_ref 134786
+  to durationcanvas_ref 135042
+  yz 439 2020 explicitmsg "allotroom"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 116 425
+msg 135554 synchronous
+  from durationcanvas_ref 135298
+  to durationcanvas_ref 135426
+  yz 529 2015 explicitmsg "roomrent"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 80 515
+msg 135810 synchronous
+  from durationcanvas_ref 135298
+  to durationcanvas_ref 135682
+  yz 723 2015 explicitmsg "messCharge"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 185 709
+msg 136834 synchronous
+  from durationcanvas_ref 135298
+  to durationcanvas_ref 136706
+  yz 594 3005 explicitmsg "amenity"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 197 580
+msg 137218 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 137090
+  yz 828 2015 explicitmsg "issuecheck to messmanager"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 256 816
+msg 137474 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 137346
+  yz 977 2015 explicitmsg "\"\""
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 374 963
+msg 137730 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 137602
+  yz 957 2015 explicitmsg "\"\""
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 417 943
+msg 137986 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 137858
+  yz 883 2015 explicitmsg "\"\""
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 452 869
+reflexivemsg 139394 synchronous
+  to durationcanvas_ref 139266
+  yz 451 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 139650 synchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 139522
+  yz 455 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 140162 synchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 140034
+  yz 486 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 140546 synchronous
+  from durationcanvas_ref 140290
+  to durationcanvas_ref 140418
+  yz 551 2015 explicitmsg "modify"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 121 537
+msg 140930 synchronous
+  from durationcanvas_ref 140674
+  to durationcanvas_ref 140802
+  yz 637 2015 explicitmsg "delete room"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 123 623
+msg 141314 synchronous
+  from durationcanvas_ref 141058
+  to durationcanvas_ref 141186
+  yz 707 2015 explicitmsg "delete hall"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 113 693
+msg 141698 synchronous
+  from durationcanvas_ref 141442
+  to durationcanvas_ref 141570
+  yz 314 2015 explicitmsg "send grant request"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 132 300
+msg 142082 synchronous
+  from durationcanvas_ref 141826
+  to durationcanvas_ref 141954
+  yz 767 2015 explicitmsg "give grant to warden"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 128 753
+end

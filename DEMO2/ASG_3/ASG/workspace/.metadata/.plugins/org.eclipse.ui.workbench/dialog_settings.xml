@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="FileSystemImportWizard">
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/media/B2043BAD043B7387/AssignMent Set 1/problem 4/MULTCLOCK"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="1025" key="dialogWidth"/>
+		<item value="526" key="dialogHeight"/>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="textEntries">
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="22" key="DIALOG_Y_ORIGIN"/>
+		<item value="-74" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="-155" key="DIALOG_Y_ORIGIN"/>
+		<item value="744" key="DIALOG_HEIGHT"/>
+		<item value="-82" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="ShowViewDialog">
+		<item value="376" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.ui.browser.view" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="90" key="DIALOG_Y_ORIGIN"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="463" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.jdt.internal.ui.fatjarpackager.JarPackageWizard" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.equinox.p2.category"/>
+			<item value="org.eclipse.jdt.ui.Java"/>
+		</list>
+	</section>
+</section>

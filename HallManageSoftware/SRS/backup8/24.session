@@ -1,0 +1,39 @@
+window_sizes 1366 715 320 960 512 82
+diagrams
+  sequencediagram_ref 141826 // admission
+    828 447 100 4 0 0
+  sequencediagram_ref 141954 // requesting and granting fund
+    828 447 100 4 0 0
+  sequencediagram_ref 142082 // complaints
+    828 447 100 4 0 0
+  sequencediagram_ref 142210 // paying dues
+    828 447 100 4 0 0
+  sequencediagram_ref 142338 // setupHall
+    828 447 100 4 0 0
+  sequencediagram_ref 142466 // paymentofSalary
+    828 447 100 4 0 0
+  collaborationdiagram_ref 143490 // admission
+    828 447 100 4 0 0
+  activitydiagram_ref 143106 // setup hall
+    828 447 100 4 0 0
+  statediagram_ref 150658 // warden
+    828 447 100 4 0 0
+  statediagram_ref 150786 // Hall
+    828 447 100 4 0 0
+  statediagram_ref 150914 // student
+    828 447 100 4 0 0
+  statediagram_ref 151042 // complaint
+    828 447 100 4 0 0
+  statediagram_ref 151170 // grantRequest
+    828 447 100 4 0 0
+  active  statediagram_ref 151298 // worker
+    1040 559 100 4 0 0
+  statediagram_ref 151426 // messManager
+    828 447 100 4 0 0
+end
+show_stereotypes
+selected statediagram_ref 151298 // worker
+open
+  state_ref 128002 // test
+end
+end

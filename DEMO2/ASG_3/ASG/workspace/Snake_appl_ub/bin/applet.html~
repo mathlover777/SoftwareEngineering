@@ -1,0 +1,10 @@
+<html>
+<head>
+<title> SNAKE AND LADDER
+</title>
+</head>
+<body>
+<applet CODE = "Snake"  WIDTH = 895 HEIGHT = 630>
+</applet>
+</body>
+</html>

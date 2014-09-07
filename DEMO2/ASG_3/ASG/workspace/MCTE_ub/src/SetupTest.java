@@ -1,0 +1,228 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JSeparator;
+
+
+public class SetupTest extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField name;
+	private JButton ok;
+	private JButton cancel;
+	
+	private String filename="";
+	private boolean success=false;
+	private String msg="";
+	/**
+	 * Launch the application.
+	 *//*
+	public static void main(String[] args) {
+		try {
+			SetupTest dialog = new SetupTest();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}*/
+
+	/**
+	 * Create the dialog.
+	 */
+	public SetupTest() {
+		setTitle("SetUp Test");
+		setResizable(false);
+		setModal(true);
+		setBounds(100, 100, 446, 235);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JPanel panel = new JPanel();
+			panel.setBounds(28, 32, 379, 121);
+			contentPanel.add(panel);
+			panel.setLayout(null);
+			{
+				JLabel lblEnterNameOf = new JLabel("Enter Name of File :");
+				lblEnterNameOf.setBounds(10, 11, 125, 38);
+				panel.add(lblEnterNameOf);
+			}
+			{
+				JLabel lblNoteFile = new JLabel("Note : File Must Be Present In Class Path !!! [where the class is]");
+				lblNoteFile.setBounds(10, 74, 404, 31);
+				panel.add(lblNoteFile);
+			}
+			{
+				name = new JTextField();
+				name.setBounds(10, 43, 203, 20);
+				panel.add(name);
+				name.setColumns(10);
+			}
+		}
+		{
+			JSeparator separator = new JSeparator();
+			separator.setBounds(10, 161, 424, 2);
+			contentPanel.add(separator);
+		}
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				ok = new JButton("OK");
+				ok.setActionCommand("OK");
+				buttonPane.add(ok);
+				getRootPane().setDefaultButton(ok);
+			}
+			{
+				cancel = new JButton("Cancel");
+				cancel.setActionCommand("Cancel");
+				buttonPane.add(cancel);
+			}
+		}
+		name.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					//String filename;
+					filename=name.getText();
+					//System.out.println("\nFile ="+filename);
+					if(filename.equals("")){
+						success=false;
+						msg="No File name Specified..";
+						dispose();
+					}
+					try {
+						createLog();
+						msg="Test SuccessFully Added !!";
+						success=true;
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						//e.printStackTrace();
+						success=false;
+						msg="Test Not Found !!";
+					}
+					dispose();
+				}
+				
+			}
+		);
+		ok.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						
+						filename=name.getText();
+						if(filename.equals("")||(filename==null)){
+							success=false;
+							msg="No File name Specified..";
+							dispose();
+						}
+						try {
+							createLog();
+							msg="Test SuccessFully Added !!";
+							success=true;
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							//e.printStackTrace();
+							msg="Test Not Found !!";
+							success=false;
+						}
+						dispose();
+					}
+					
+				}
+			);
+		cancel.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						dispose();
+					}
+					
+				}
+			);
+	}
+	
+	public void createLog() throws IOException{
+		String onlyname="";
+		int j=0;
+		while(filename.charAt(j)!='.'){
+			onlyname=onlyname+filename.charAt(j);
+			j++;
+		}
+		String logname=onlyname+"_log.txt";
+		
+		/************************/
+		 FileInputStream fstream = new FileInputStream(filename);
+		  // Get the object of DataInputStream
+		  DataInputStream in = new DataInputStream(fstream);
+		  String strLine=
+				  "";
+		  BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		  strLine = br.readLine();
+		  int count=stringToInt(strLine);
+		br.close();
+		in.close();
+		fstream.close();
+		/************************/
+		try{
+			  // Create file 
+			  FileWriter f= new FileWriter(logname);
+			  BufferedWriter out = new BufferedWriter(f);
+			  out.write(""+count);
+			  //Close the output stream
+			  out.close();
+			  f.close();
+			  }catch (Exception e){//Catch exception if any
+			  //System.err.println("Error: " + e.getMessage());
+			  }
+	}
+	
+	
+	public int stringToInt(String s){
+		int n=0;
+		for(int i=0;i<=s.length()-1;i++){
+			n=n*10+(s.charAt(i))-48;
+		}
+		return n;
+	}
+	
+	
+	public boolean isSucess(){
+		return success;
+	}
+	public String getMsg(){
+		return msg;
+	}
+	public String getFileName(){
+		//System.out.println("\nFile ="+filename);
+		return filename;
+	}
+
+}

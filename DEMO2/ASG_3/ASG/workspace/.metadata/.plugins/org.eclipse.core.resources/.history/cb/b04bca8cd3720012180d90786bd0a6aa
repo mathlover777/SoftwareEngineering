@@ -1,0 +1,98 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class addData_FromFile extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField file;
+	private JButton cancel;
+	private JButton ok;
+	private boolean success=false;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			addData_FromFile dialog = new addData_FromFile();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public addData_FromFile() {
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Type File Name:");
+		lblNewLabel.setBounds(12, 12, 144, 37);
+		contentPanel.add(lblNewLabel);
+		
+		file = new JTextField();
+		file.setBounds(12, 72, 410, 37);
+		contentPanel.add(file);
+		file.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("File Must Be Present in the Directory where the classes are stored !!\r\n");
+		lblNewLabel_1.setBounds(12, 121, 410, 93);
+		contentPanel.add(lblNewLabel_1);
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				ok = new JButton("OK");
+				ok.setActionCommand("OK");
+				buttonPane.add(ok);
+				getRootPane().setDefaultButton(ok);
+			}
+			{
+				cancel = new JButton("Cancel");
+				cancel.setActionCommand("Cancel");
+				buttonPane.add(cancel);
+			}
+		}
+		ok.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+			}
+		);
+		cancel.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						dispose();
+					}
+					
+				}
+			);
+	}
+	public boolean isSuccess(){
+		return success;
+	}
+}

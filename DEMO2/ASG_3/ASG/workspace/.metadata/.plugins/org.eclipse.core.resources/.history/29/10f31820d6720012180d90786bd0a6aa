@@ -1,0 +1,208 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class addData_FromFile extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField file;
+	private JButton cancel;
+	private JButton ok;
+	private boolean success=false;
+	private String msg;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			addData_FromFile dialog = new addData_FromFile();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public addData_FromFile() {
+		setResizable(false);
+		setModal(true);
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Type File Name:");
+		lblNewLabel.setBounds(12, 12, 144, 37);
+		contentPanel.add(lblNewLabel);
+		
+		file = new JTextField();
+		file.setBounds(12, 72, 410, 37);
+		contentPanel.add(file);
+		file.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("File Must Be Present in the Directory where the classes are stored !!\r\n");
+		lblNewLabel_1.setBounds(12, 121, 410, 93);
+		contentPanel.add(lblNewLabel_1);
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				ok = new JButton("OK");
+				ok.setActionCommand("OK");
+				buttonPane.add(ok);
+				getRootPane().setDefaultButton(ok);
+			}
+			{
+				cancel = new JButton("Cancel");
+				cancel.setActionCommand("Cancel");
+				buttonPane.add(cancel);
+			}
+		}
+		ok.addActionListener(
+			new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+			}
+		);
+		cancel.addActionListener(
+				new ActionListener(){
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						dispose();
+					}
+					
+				}
+			);
+	}
+	private int generateUcn() throws IOException{
+		FileInputStream fstream = new FileInputStream("lastucn.txt");
+		// Get the object of DataInputStream
+		DataInputStream in = new DataInputStream(fstream);
+		String strLine="";
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		strLine=br.readLine();
+		br.close();
+		in.close();
+		fstream.close();
+		createEmptyFile("lastucn.txt");
+		addLine("lastucn.txt",""+(stringToInt(strLine)+1));
+		return (stringToInt(strLine)+1);
+	}
+	private void addDataFromFile() throws IOException{
+		FileInputStream fstream = new FileInputStream(file.getText());
+		// Get the object of DataInputStream
+		DataInputStream in = new DataInputStream(fstream);
+		String strLine="";
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		strLine=br.readLine();
+		int ucn;
+		String name;
+		while(strLine!=null){
+		ucn=generateUcn();
+		name=""+strLine;
+		createEmptyFile("details_"+ucn+".txt");
+		addLine("details_"+ucn+".txt",strLine);
+		addLine("details_"+ucn+".txt",br.readLine());
+		addLine("details_"+ucn+".txt",br.readLine());
+		addLine("details_"+ucn+".txt",br.readLine());
+		addLine("details_"+ucn+".txt",br.readLine());
+		addLine("details_"+ucn+".txt",br.readLine());
+		addLine("details_"+ucn+".txt",br.readLine());
+		addLine("clist.txt",""+ucn);
+		addLine("clist.txt",""+0);
+		msg=msg+"\r\nname = "+name+" UCN= "+ucn;
+		strLine=br.readLine();
+		}
+		br.close();
+		in.close();
+		fstream.close();
+	}
+	public boolean isSuccess(){
+		return success;
+	}
+	public static void copyToFile(String file1,String file2) throws IOException{
+		FileInputStream f1=new FileInputStream(file1);
+		FileOutputStream f2=new FileOutputStream(file2);
+		int i;
+		char c=0;
+		i=f1.read();
+		while(i!=-1){
+			f2.write(i);
+			i=f1.read();
+		}
+		f1.close();
+		f2.close();
+	}
+	public static void addLine(String file,String line) throws IOException{
+		FileInputStream f1=new FileInputStream(file);
+		FileWriter f2=new FileWriter("tempa.txt");
+		BufferedWriter out = new BufferedWriter(f2);
+		int i;
+		i=f1.read();
+		int c=0;
+		if(i==-1){
+			c=1;
+		}
+		while(i!=-1){
+			out.write((char)i);
+			i=f1.read();
+		}
+		if(c==0){
+			out.write("\r\n"+line);
+		}
+		if(c==1){
+			out.write(line);
+		}
+		out.close();
+		f1.close();
+		copyToFile("tempa.txt",file);
+	}
+	
+	public boolean createEmptyFile(String filename) throws IOException{
+		FileWriter f2=new FileWriter(filename);
+		BufferedWriter out = new BufferedWriter(f2);
+		out.close();
+		f2.close();
+		return true;
+	}
+	public int stringToInt(String s){
+		int n=0;
+		for(int i=0;i<=s.length()-1;i++){
+			n=n*10+(s.charAt(i))-48;
+		}
+		return n;
+	}
+	public String getMsg(){
+		return msg;
+	}
+}

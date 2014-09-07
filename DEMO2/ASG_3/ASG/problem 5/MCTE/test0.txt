@@ -1,0 +1,25 @@
+4
+What is the Capital of India ?
+Kolkata
+Delhi
+Chennai
+Mumbai
+B
+What is 2+2 ?
+-2
+-4
+4
+0
+C
+Which IIT is the Best ?
+KGP
+Bombay
+Delhi
+Madrass
+D
+What is Sun ?
+A planet
+A Star
+A Black Hole
+A Comet
+B
